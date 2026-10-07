@@ -38,7 +38,7 @@ export default function Hero() {
       </div>
 
       <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent lg:bg-gradient-to-l lg:from-black/90 lg:via-black/40 lg:to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent lg:bg-gradient-to-r lg:from-white/95 lg:via-white/70 lg:to-transparent" />
         
         <div className="absolute -left-[10%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ed2671]/30 blur-[100px] sm:bg-[#ed2671]/20" />
         <div className="absolute left-[10%] top-[30%] h-[500px] w-[500px] rounded-full bg-[#5518a6]/25 blur-[120px] sm:bg-[#5518a6]/15" />
