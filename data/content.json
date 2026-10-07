@@ -1,0 +1,698 @@
+{
+  "Birthday": {
+    "site": {
+      "name": "BdayJunction",
+      "logo": "/logo.webp",
+      "description": "We craft unforgettable birthday celebrations filled with joy, creativity, and flawless execution. Making every moment count.",
+      "phone": "+91 98765 43210",
+      "email": "hello@bdayjunction.com",
+      "address": "123 Event Street, Celebration City, IN 400001"
+    },
+    "theme": {
+      "colors": {
+        "primary": "#E91E63",
+        "secondary": "#8E24AA",
+        "accent": "#FF4F9A",
+        "dark": "#14213D",
+        "background": "#FFF5F8",
+        "white": "#FFFFFF",
+        "text": "#333333",
+        "muted": "#777777"
+      }
+    },
+    "templateComponents": {
+      "template-1": {
+        "shared": {
+          "Topbar": "BirthdayTopbar1",
+          "Header": "BirthdayHeader1",
+          "Footer": "BirthdayFooter1"
+        },
+        "pages": {
+          "home": {
+            "components": [
+              {
+                "key": "Banner",
+                "component": "BirthdayBanner1"
+              },
+              {
+                "key": "About",
+                "component": "BirthdayAbout1"
+              },
+              {
+                "key": "Services",
+                "component": "BirthdayServices1"
+              },
+              {
+                "key": "CTA",
+                "component": "BirthdayCTA1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "BirthdayTestimonial1"
+              },
+              {
+                "key": "Team",
+                "component": "BirthdayTeam1"
+              },
+              {
+                "key": "Blog",
+                "component": "BirthdayBlog1"
+              },
+              {
+                "key": "FAQ",
+                "component": "BirthdayFAQ1"
+              }
+            ]
+          },
+          "about-us": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "BirthdayPageBanner1"
+              },
+              {
+                "key": "About",
+                "component": "BirthdayAbout1"
+              }
+            ]
+          },
+          "services": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "BirthdayPageBanner1"
+              },
+              {
+                "key": "ServicesListing",
+                "component": "BirthdayServices1"
+              }
+            ]
+          },
+          "service-detail": {
+            "expand": "items",
+            "components": [
+              {
+                "key": "ServiceDetail",
+                "component": "BirthdayServiceDetail1"
+              }
+            ]
+          },
+          "our-team": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "BirthdayPageBanner1"
+              },
+              {
+                "key": "Team",
+                "component": "BirthdayTeam1"
+              }
+            ]
+          },
+          "testimonials": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "BirthdayPageBanner1"
+              },
+              {
+                "key": "Testimonial",
+                "component": "BirthdayTestimonial1"
+              }
+            ]
+          },
+          "blog": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "BirthdayPageBanner1"
+              },
+              {
+                "key": "BlogListing",
+                "component": "BirthdayBlog1"
+              }
+            ]
+          },
+          "blog-detail": {
+            "expand": "items",
+            "components": [
+              {
+                "key": "BlogDetail",
+                "component": "BirthdayBlogDetail1"
+              }
+            ]
+          },
+          "faq": {
+            "components": [
+              {
+                "key": "PageBanner",
+                "component": "BirthdayPageBanner1"
+              },
+              {
+                "key": "FAQ",
+                "component": "BirthdayFAQ1"
+              }
+            ]
+          }
+        }
+      }
+    },
+    "sections": {
+      "Topbar": {
+        "variants": {
+          "BirthdayTopbar1": {
+            "phone": "+91 98765 43210",
+            "email": "hello@bdayjunction.com",
+            "social": [
+              {
+                "name": "Facebook",
+                "icon": "facebook",
+                "href": "#"
+              },
+              {
+                "name": "Instagram",
+                "icon": "instagram",
+                "href": "#"
+              },
+              {
+                "name": "Twitter",
+                "icon": "twitter",
+                "href": "#"
+              },
+              {
+                "name": "LinkedIn",
+                "icon": "linkedin",
+                "href": "#"
+              }
+            ]
+          }
+        }
+      },
+      "Header": {
+        "variants": {
+          "BirthdayHeader1": {
+            "logo": "/images/logo.png",
+            "links": [
+              {
+                "name": "Home",
+                "href": "/"
+              },
+              {
+                "name": "About Us",
+                "href": "/about"
+              },
+              {
+                "name": "Services",
+                "href": "/services"
+              },
+              {
+                "name": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "name": "Blog",
+                "href": "/blog"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "button": "Book Now",
+            "buttonHref": "/contact"
+          }
+        }
+      },
+      "Banner": {
+        "variants": {
+          "BirthdayBanner1": {
+            "banners": [
+              "/images/hero/hero.jpg"
+            ],
+            "backgroundImage": "/images/hero/heroBanner.webp",
+            "cursiveText": "BIRTHDAY PLANNER",
+            "heading": "Make Your Birthday Truly Special",
+            "description": "Create unforgettable memories with our expert event planning services tailored exclusively for your special moments.",
+            "buttonText": "Book Now",
+            "buttonHref": "/contact"
+          }
+        }
+      },
+      "About": {
+        "variants": {
+          "BirthdayAbout1": {
+            "cursiveText": "ABOUT US",
+            "headingPart1": "Making Birthdays",
+            "headingPart2": "Truly Special",
+            "description": "At BdayJunction, we believe every birthday is a milestone worth celebrating to the fullest. Our dedicated team of planners ensures your day is stress-free, beautiful, and absolutely perfect.",
+            "features": [
+              {
+                "title": "Personalized Planning",
+                "icon": "Heart"
+              },
+              {
+                "title": "Memorable Experiences",
+                "icon": "Star"
+              }
+            ],
+            "buttonText": "About More",
+            "buttonHref": "/about",
+            "mainImage": "/images/about/about-1.jpg",
+            "smallImage": "/images/about/about-1.jpg",
+            "thirdImage": "/images/about/about-1.jpg"
+          }
+        }
+      },
+      "Services": {
+        "variants": {
+          "BirthdayServices1": {
+            "cursiveText": "OUR SERVICES",
+            "headingPart1": "Making Every Celebration",
+            "headingPart2": "Truly Special",
+            "description": "From intimate gatherings to grand bashes, our comprehensive services cover all your birthday planning needs.",
+            "items": [
+              {
+                "slug": "birthday-party-planning",
+                "icon": "CalendarHeart",
+                "image": "/images/about/about-1.jpg",
+                "title": "Birthday Party Planning",
+                "description": "End-to-end event planning to ensure every detail of your birthday is perfect and entirely stress-free.",
+                "href": "/services/birthday-party-planning"
+              },
+              {
+                "slug": "theme-decoration",
+                "icon": "Palette",
+                "image": "/images/about/about-1.jpg",
+                "title": "Theme Decoration",
+                "description": "Immersive, customized decorations that bring your favorite themes to life, creating magical atmospheres.",
+                "href": "/services/theme-decoration"
+              },
+              {
+                "slug": "venue-selection",
+                "icon": "MapPin",
+                "image": "/images/about/about-1.jpg",
+                "title": "Venue Selection",
+                "description": "Access to the most exclusive and beautiful venues perfectly suited for your celebration's size and style.",
+                "href": "/services/venue-selection"
+              },
+              {
+                "slug": "food-catering",
+                "icon": "Utensils",
+                "image": "/images/about/about-1.jpg",
+                "title": "Food & Catering",
+                "description": "Delicious, curated menus and professional catering services that will delight all your guests.",
+                "href": "/services/food-catering"
+              },
+              {
+                "slug": "photography-videography",
+                "icon": "Camera",
+                "image": "/images/about/about-1.jpg",
+                "title": "Photography & Videography",
+                "description": "Capturing every smile and special moment with high-quality, professional media services.",
+                "href": "/services/photography-videography"
+              },
+              {
+                "slug": "entertainment",
+                "icon": "Music",
+                "image": "/images/about/about-1.jpg",
+                "title": "Entertainment",
+                "description": "Engaging activities, musicians, and performers to keep the energy high and guests thoroughly entertained.",
+                "href": "/services/entertainment"
+              }
+            ]
+          }
+        }
+      },
+      "CTA": {
+        "variants": {
+          "BirthdayCTA1": {
+            "cursiveText": "LET'S MAKE IT SPECIAL",
+            "headingPart1": "Plan Your Perfect",
+            "headingPart2": "Birthday Celebration",
+            "description": "Reach out to us today to start planning an event that you and your guests will remember for a lifetime.",
+            "buttonText": "Book Now",
+            "buttonHref": "/contact",
+            "image": "/images/cta.webp"
+          }
+        }
+      },
+      "Testimonial": {
+        "variants": {
+          "BirthdayTestimonial1": {
+            "cursiveText": "TESTIMONIALS",
+            "headingPart1": "What Our",
+            "headingPart2": "Clients Say",
+            "description": "Hear from our happy clients who have experienced memorable events with us.",
+            "items": [
+              {
+                "image": "/images/hero/hero.jpg",
+                "name": "Priya Sharma",
+                "title": "Happy Mother",
+                "quote": "The team made my daughter's 5th birthday an absolute dream! The decorations were stunning and the kids had a blast.",
+                "rating": 5
+              },
+              {
+                "image": "/images/hero/hero.jpg",
+                "name": "Rahul Mehta",
+                "title": "Corporate Client",
+                "quote": "Flawless execution. Everything from the venue to the catering was handled professionally. Highly recommended!",
+                "rating": 5
+              },
+              {
+                "image": "/images/hero/hero.jpg",
+                "name": "Neha Kapoor",
+                "title": "Birthday Girl",
+                "quote": "I couldn't have asked for a better sweet 16. It was exactly what I pictured and perfectly planned out.",
+                "rating": 5
+              }
+            ]
+          }
+        }
+      },
+      "Team": {
+        "variants": {
+          "BirthdayTeam1": {
+            "preTitle": "OUR TEAM MEMBER",
+            "titlePart1": "Our Amazing & Learned",
+            "titlePart2": "Event Speakers",
+            "description": "Meet our talented speakers who bring knowledge, inspiration, and real-world experience to every event.",
+            "items": [
+              {
+                "name": "Rohit Sharma",
+                "designation": "Motivational Speaker",
+                "image": "/images/team/rohit.jpg",
+                "slug": "rohit-sharma",
+                "social": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "twitter": "#"
+                }
+              },
+              {
+                "name": "Priya Verma",
+                "designation": "Event Strategist",
+                "image": "/images/team/priya.jpg",
+                "slug": "priya-verma",
+                "social": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "twitter": "#"
+                }
+              },
+              {
+                "name": "Amit Singh",
+                "designation": "Business Coach",
+                "image": "/images/team/amit.jpg",
+                "slug": "amit-singh",
+                "social": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "twitter": "#"
+                }
+              },
+              {
+                "name": "Ananya Patel",
+                "designation": "Leadership Expert",
+                "image": "/images/team/priya.jpg",
+                "slug": "ananya-patel",
+                "social": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "twitter": "#"
+                }
+              },
+              {
+                "name": "Vikram Desai",
+                "designation": "Innovation Strategist",
+                "image": "/images/team/rohit.jpg",
+                "slug": "vikram-desai",
+                "social": {
+                  "facebook": "#",
+                  "instagram": "#",
+                  "linkedin": "#",
+                  "twitter": "#"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "Blog": {
+        "variants": {
+          "BirthdayBlog1": {
+            "cursiveText": "LATEST BLOG AND NEWS",
+            "headingPart1": "What's Happening",
+            "headingPart2": "Near",
+            "items": [
+              {
+                "slug": "creative-birthday-party-ideas",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 12, 2026",
+                "title": "Creative Birthday Party Ideas for All Ages",
+                "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
+                "author": "Priya Verma"
+              },
+              {
+                "slug": "perfect-outdoor-celebration",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 10, 2026",
+                "title": "How to Plan a Perfect Outdoor Celebration",
+                "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
+                "author": "Amit Singh"
+              },
+              {
+                "slug": "theme-decoration-trends",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 05, 2026",
+                "title": "Top Theme Decoration Trends This Year",
+                "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
+                "author": "Rohit Sharma"
+              }
+            ],
+            "buttonText": "View More Blog"
+          }
+        }
+      },
+      "FAQ": {
+        "variants": {
+          "BirthdayFAQ1": {
+            "cursiveText": "FAQ",
+            "headingPart1": "Frequently Asked",
+            "headingPart2": "Questions",
+            "description": "Find answers to the most common questions about our event planning services.",
+            "image": "/images/faq/faq.webp",
+            "items": [
+              {
+                "question": "How early should I book your services?",
+                "answer": "We recommend booking at least 4-6 weeks in advance to ensure availability and proper planning time."
+              },
+              {
+                "question": "Can you customize a package based on my budget?",
+                "answer": "Yes! We offer tailored packages to meet your specific budget and requirements without compromising quality."
+              },
+              {
+                "question": "Do you provide venue options?",
+                "answer": "Absolutely. We have partnerships with numerous venues and will present you with options that fit your theme."
+              },
+              {
+                "question": "What happens if I need to cancel my event?",
+                "answer": "We have a flexible cancellation policy. Please refer to our contract terms for detailed information on deposits and timelines."
+              },
+              {
+                "question": "Do you handle food and catering as well?",
+                "answer": "Yes, we work with top-tier catering partners to provide exquisite menus customized for your guests."
+              }
+            ]
+          }
+        }
+      },
+      "Footer": {
+        "variants": {
+          "BirthdayFooter1": {
+            "description": "Creating magical moments and unforgettable memories for your special day.",
+            "quickLinks": [
+              {
+                "name": "About Us",
+                "href": "/about"
+              },
+              {
+                "name": "Services",
+                "href": "/services"
+              },
+              {
+                "name": "Gallery",
+                "href": "/gallery"
+              },
+              {
+                "name": "Blog",
+                "href": "/blog"
+              },
+              {
+                "name": "Contact Us",
+                "href": "/contact"
+              }
+            ],
+            "services": [
+              {
+                "name": "Birthday Party Planning",
+                "href": "/services/birthday-party-planning"
+              },
+              {
+                "name": "Theme Decoration",
+                "href": "/services/theme-decoration"
+              },
+              {
+                "name": "Venue Selection",
+                "href": "/services/venue-selection"
+              },
+              {
+                "name": "Food & Catering",
+                "href": "/services/food-catering"
+              },
+              {
+                "name": "Photography",
+                "href": "/services/photography-videography"
+              },
+              {
+                "name": "Entertainment",
+                "href": "/services/entertainment"
+              }
+            ],
+            "social": [
+              {
+                "name": "Facebook",
+                "icon": "facebook",
+                "href": "#"
+              },
+              {
+                "name": "Instagram",
+                "icon": "instagram",
+                "href": "#"
+              },
+              {
+                "name": "Twitter",
+                "icon": "twitter",
+                "href": "#"
+              },
+              {
+                "name": "LinkedIn",
+                "icon": "linkedin",
+                "href": "#"
+              }
+            ],
+            "contact": {
+              "email": "info@xyz.com",
+              "phone": [
+                "+1 000-000-000",
+                "+1 000-000-000"
+              ],
+              "address": "123 Event Street, Celebration City, IN 400001"
+            }
+          }
+        }
+      },
+      "PageBanners": {
+        "about": {
+          "title": "About Us",
+          "bgText": "ABOUT US",
+          "image": "/images/pageBanner.webp",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "About Us"
+            }
+          ]
+        },
+        "contact": {
+          "title": "Contact",
+          "bgText": "CONTACT",
+          "image": "/images/pageBanner.webp",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Contact"
+            }
+          ]
+        },
+        "services": {
+          "title": "Our Services",
+          "bgText": "SERVICES",
+          "image": "/images/pageBanner.webp",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Services"
+            }
+          ]
+        },
+        "gallery": {
+          "title": "Gallery",
+          "bgText": "GALLERY",
+          "image": "/images/pageBanner.webp",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Gallery"
+            }
+          ]
+        },
+        "blog": {
+          "title": "Blog",
+          "bgText": "OUR BLOG",
+          "image": "/images/pageBanner.webp",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Blog"
+            }
+          ]
+        }
+      },
+      "Contact": {
+        "variants": {
+          "BirthdayContact1": {
+            "eyebrow": "GET IN TOUCH",
+            "headingPart1": "Let’s Plan Your",
+            "headingPart2": "Special Celebration",
+            "description": "Have a question or ready to plan your event? Fill out the form below and our team will get back to you soon with the best suggestions.",
+            "image": "/images/contact.webp",
+            "formEyebrow": "SEND US A MESSAGE",
+            "formTitlePart1": "Write Here",
+            "formTitlePart2": "Below?",
+            "formDescription": "For your special day, we will do everything from planning to execution and make it truly memorable. Get in touch with us now.",
+            "services": [
+              "Birthday Party Planning",
+              "Theme Decoration",
+              "Venue Selection",
+              "Food & Catering",
+              "Photography & Videography",
+              "Entertainment"
+            ],
+            "buttonText": "Submit Now",
+            "successTitle": "Message Sent Successfully!",
+            "successDescription": "Thank you for contacting us. Our team will get back to you soon with the best suggestions for your celebration."
+          }
+        }
+      }
+    }
+  }
+}
