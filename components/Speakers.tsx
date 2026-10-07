@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { team } from "@/data";
 import SpeakerCard from "./SpeakerCard";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -9,9 +9,24 @@ export default function Speakers() {
   const { preTitle, titlePart1, titlePart2, description, items } = team;
   
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
 
-  const next = () => setCurrentIndex((prev) => (prev + 1) % items.length);
-  const prev = () => setCurrentIndex((prev) => (prev - 1 + items.length) % items.length);
+  useEffect(() => {
+    const updateItemsPerPage = () => {
+      if (window.innerWidth < 768) setItemsPerPage(1);
+      else if (window.innerWidth < 1024) setItemsPerPage(2);
+      else setItemsPerPage(3);
+    };
+    
+    updateItemsPerPage();
+    window.addEventListener("resize", updateItemsPerPage);
+    return () => window.removeEventListener("resize", updateItemsPerPage);
+  }, []);
+
+  const maxIndex = Math.max(0, items.length - itemsPerPage);
+
+  const next = () => setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  const prev = () => setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
 
   return (
     <section className="py-24 bg-[#fff5f8] relative overflow-hidden">
@@ -44,13 +59,17 @@ export default function Speakers() {
             <ChevronLeft size={28} strokeWidth={2} />
           </button>
 
-          <div className="overflow-hidden px-2 py-8 -my-8">
+          <div className="overflow-hidden py-8 -my-8 -mx-4 px-4">
             <div 
-              className="flex transition-transform duration-500 ease-in-out md:grid md:grid-cols-2 lg:grid-cols-3 gap-8 md:transform-none"
-              style={{ transform: `translateX(calc(-${currentIndex * 100}% - ${currentIndex * 2}rem))` }}
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * (100 / itemsPerPage)}%)` }}
             >
               {items.map((item, idx) => (
-                <div key={idx} className="min-w-full md:min-w-0 transition-transform">
+                <div 
+                  key={idx} 
+                  className="shrink-0 px-4"
+                  style={{ width: `${100 / itemsPerPage}%` }}
+                >
                   <SpeakerCard {...item} />
                 </div>
               ))}
@@ -67,7 +86,7 @@ export default function Speakers() {
         </div>
 
         <div className="flex justify-center items-center gap-3 mt-10">
-          {items.map((_, idx) => (
+          {Array.from({ length: maxIndex + 1 }).map((_, idx) => (
             <button
               key={idx}
               onClick={() => setCurrentIndex(idx)}
