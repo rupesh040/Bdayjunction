@@ -61,7 +61,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fff7fa] py-16 sm:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#fff7fa] py-8 sm:py-10 lg:py-12">
       <div className="pointer-events-none absolute left-1/2 top-0 -z-0 h-72 w-[600px] -translate-x-1/2 rounded-full bg-pink-100/50 blur-3xl" />
 
       <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12 xl:px-14">

@@ -2,13 +2,13 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { CalendarDays, Heart } from "lucide-react";
+import { CalendarHeart, Heart } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import { about } from "@/data";
 
 const iconMap: Record<string, React.ReactNode> = {
   Heart: <Heart size={25} strokeWidth={2} />,
-  CalendarDays: <CalendarDays size={25} strokeWidth={2} />,
+  CalendarDays: <CalendarHeart size={25} strokeWidth={2} />,
 };
 
 export default function AboutSection() {
@@ -53,7 +53,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fff8fa] py-16 sm:py-20 lg:py-24 xl:py-28">
+    <section className="relative overflow-hidden bg-[#fff8fa] py-10 sm:py-16 lg:py-18 xl:py-22">
 
 
       <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12 xl:px-14">

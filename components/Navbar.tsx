@@ -4,7 +4,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, ArrowRight } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import * as LucideIcons from "lucide-react";
 import { useState } from "react";
 import { site, footer, header, pageBanners, about, blog, services } from "@/data";
 
@@ -136,8 +137,11 @@ export default function Navbar() {
                   transition={{ duration: 0.2 }}
                   className="flex h-[51px] items-center gap-4 bg-[#b71957] px-7 text-[15px] font-semibold text-white shadow-sm"
                 >
-                  <span>Book Now</span>
-                  <ArrowRight size={18} strokeWidth={2} />
+                  <span>{(header as any).button}</span>
+                  {(() => {
+                    const BtnIcon = (LucideIcons as any)[(header as any).buttonIcon] || LucideIcons.ArrowRight;
+                    return <BtnIcon size={18} strokeWidth={2} />;
+                  })()}
                 </motion.div>
               </Link>
             </motion.div>
@@ -245,8 +249,11 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className="flex h-[50px] w-full items-center justify-center gap-3 bg-[#b71957] text-[15px] font-semibold text-white transition-colors hover:bg-[#a9144d]"
                 >
-                  <span>Book Now</span>
-                  <ArrowRight size={18} />
+                  <span>{(header as any).button}</span>
+                  {(() => {
+                    const BtnIcon = (LucideIcons as any)[(header as any).buttonIcon] || LucideIcons.ArrowRight;
+                    return <BtnIcon size={18} />;
+                  })()}
                 </Link>
               </motion.div>
             </div>

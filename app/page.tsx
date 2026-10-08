@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 import Testimonials from "@/components/Testimonials";
 import Speakers from "@/components/Speakers";
 import BlogSection from "@/components/BlogSection";
-import FAQ from "@/components/FAQ";
+import FaqSection from "@/components/FaqSection";
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       <Testimonials />
       <Speakers />
       <BlogSection />
-      <FAQ />
+      <FaqSection />
     </>
   );
 }

@@ -4,9 +4,9 @@
       "name": "BdayJunction",
       "logo": "/logo.webp",
       "description": "We craft unforgettable birthday celebrations filled with joy, creativity, and flawless execution. Making every moment count.",
-      "phone": "+91 98765 43210",
-      "email": "hello@bdayjunction.com",
-      "address": "123 Event Street, Celebration City, IN 400001"
+      "phone": "+1 000-000-000",
+      "email": "info@xy.com",
+      "address": "456 Central Ave, Suite 200, Los Angeles, CA 90012, USA"
     },
     "theme": {
       "colors": {
@@ -175,9 +175,9 @@
                 "href": "#"
               },
               {
-                "name": "Twitter",
-                "icon": "twitter",
-                "href": "#"
+                "name": "X",
+                "icon": "x",
+                "href": "https://x.com"
               },
               {
                 "name": "LinkedIn",
@@ -219,7 +219,8 @@
               }
             ],
             "button": "Book Now",
-            "buttonHref": "/contact"
+            "buttonHref": "/contact",
+            "buttonIcon": "ArrowRight"
           }
         }
       },
@@ -244,15 +245,17 @@
             "cursiveText": "ABOUT US",
             "headingPart1": "Making Birthdays",
             "headingPart2": "Truly Special",
-            "description": "At BdayJunction, we believe every birthday is a milestone worth celebrating to the fullest. Our dedicated team of planners ensures your day is stress-free, beautiful, and absolutely perfect.",
+            "description": "At BdayJunction, we believe every birthday deserves to be celebrated in a unique and memorable way. We plan, design, and manage beautiful birthday events tailored to your needs, making your special day stress-free and full of joy.",
             "features": [
               {
                 "title": "Personalized Planning",
-                "icon": "Heart"
+                "description": "We create customized themes and setups for every age group.",
+                "icon": "CalendarDays"
               },
               {
                 "title": "Memorable Experiences",
-                "icon": "Star"
+                "description": "From decoration to execution, we handle every detail with care.",
+                "icon": "Heart"
               }
             ],
             "buttonText": "About More",
@@ -277,7 +280,35 @@
                 "image": "/images/about/about-1.jpg",
                 "title": "Birthday Party Planning",
                 "description": "End-to-end event planning to ensure every detail of your birthday is perfect and entirely stress-free.",
-                "href": "/services/birthday-party-planning"
+                "href": "/services/birthday-party-planning",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our birthday party planning service is designed to turn your ideas into a beautiful and memorable celebration. From the initial planning to the final execution, we carefully manage every detail to create an experience that feels personal, joyful, and completely stress-free.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our birthday party planning service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
               },
               {
                 "slug": "theme-decoration",
@@ -285,7 +316,35 @@
                 "image": "/images/about/about-1.jpg",
                 "title": "Theme Decoration",
                 "description": "Immersive, customized decorations that bring your favorite themes to life, creating magical atmospheres.",
-                "href": "/services/theme-decoration"
+                "href": "/services/theme-decoration",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our theme decoration service is designed to turn your ideas into a beautiful and memorable celebration. From the initial planning to the final execution, we carefully manage every detail to create an experience that feels personal, joyful, and completely stress-free.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our theme decoration service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
               },
               {
                 "slug": "venue-selection",
@@ -293,7 +352,35 @@
                 "image": "/images/about/about-1.jpg",
                 "title": "Venue Selection",
                 "description": "Access to the most exclusive and beautiful venues perfectly suited for your celebration's size and style.",
-                "href": "/services/venue-selection"
+                "href": "/services/venue-selection",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our venue selection service is designed to turn your ideas into a beautiful and memorable celebration. From the initial planning to the final execution, we carefully manage every detail to create an experience that feels personal, joyful, and completely stress-free.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our venue selection service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
               },
               {
                 "slug": "food-catering",
@@ -301,7 +388,35 @@
                 "image": "/images/about/about-1.jpg",
                 "title": "Food & Catering",
                 "description": "Delicious, curated menus and professional catering services that will delight all your guests.",
-                "href": "/services/food-catering"
+                "href": "/services/food-catering",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our food & catering service is designed to turn your ideas into a beautiful and memorable celebration. From the initial planning to the final execution, we carefully manage every detail to create an experience that feels personal, joyful, and completely stress-free.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our food & catering service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
               },
               {
                 "slug": "photography-videography",
@@ -309,7 +424,35 @@
                 "image": "/images/about/about-1.jpg",
                 "title": "Photography & Videography",
                 "description": "Capturing every smile and special moment with high-quality, professional media services.",
-                "href": "/services/photography-videography"
+                "href": "/services/photography-videography",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our photography & videography service is designed to turn your ideas into a beautiful and memorable celebration. From the initial planning to the final execution, we carefully manage every detail to create an experience that feels personal, joyful, and completely stress-free.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our photography & videography service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
               },
               {
                 "slug": "entertainment",
@@ -317,7 +460,107 @@
                 "image": "/images/about/about-1.jpg",
                 "title": "Entertainment",
                 "description": "Engaging activities, musicians, and performers to keep the energy high and guests thoroughly entertained.",
-                "href": "/services/entertainment"
+                "href": "/services/entertainment",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our entertainment service is designed to turn your ideas into a beautiful and memorable celebration. From the initial planning to the final execution, we carefully manage every detail to create an experience that feels personal, joyful, and completely stress-free.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our entertainment service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
+              },
+              {
+                "slug": "gift-hampers",
+                "icon": "Palette",
+                "image": "/images/about/about-1.jpg",
+                "title": "Gift Hampers",
+                "description": "Customized gift hampers and return favors for your guests, perfectly matched to your celebration's theme.",
+                "href": "/services/gift-hampers",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our gift hampers service is designed to leave a lasting impression on your guests. We source the best items and curate beautiful hampers tailored to your birthday theme and preferences.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our gift hampers service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
+              },
+              {
+                "slug": "custom-invitations",
+                "icon": "Music",
+                "image": "/images/about/about-1.jpg",
+                "title": "Custom Invitations",
+                "description": "Beautiful, tailor-made digital and physical invitations that set the tone for your special day.",
+                "href": "/services/custom-invitations",
+                "features": [
+                  "Customized planning based on your requirements",
+                  "Creative themes and beautiful decorations",
+                  "Professional event coordination",
+                  "Entertainment and activities for guests",
+                  "Personalized experience for every celebration",
+                  "Complete support from planning to execution"
+                ],
+                "detailDescription": "Our custom invitations service helps you make a perfect first impression. From elegant physical cards to interactive digital invites, we design everything to match your unique celebration.",
+                "detailImage": "/images/about/about-1.jpg",
+                "primaryDescription": "Birthdays are a time to celebrate life and create beautiful memories with family and friends. Our custom invitations service brings your ideas to life with creative themes, stunning decorations, delicious food, fun activities and seamless event coordination.",
+                "highlightBoxes": [
+                  {
+                    "icon": "Sparkles",
+                    "title": "Creative Themes",
+                    "text": "Unique and trendy setups for every age group."
+                  },
+                  {
+                    "icon": "PartyPopper",
+                    "title": "Fun & Entertainment",
+                    "text": "Engaging activities, games and live entertainment."
+                  },
+                  {
+                    "icon": "Users",
+                    "title": "Memorable Experience",
+                    "text": "Well-planned events that you and your guests will love."
+                  }
+                ]
               }
             ]
           }
@@ -386,7 +629,7 @@
                   "facebook": "#",
                   "instagram": "#",
                   "linkedin": "#",
-                  "twitter": "#"
+                  "x": "#"
                 }
               },
               {
@@ -398,7 +641,7 @@
                   "facebook": "#",
                   "instagram": "#",
                   "linkedin": "#",
-                  "twitter": "#"
+                  "x": "#"
                 }
               },
               {
@@ -410,7 +653,7 @@
                   "facebook": "#",
                   "instagram": "#",
                   "linkedin": "#",
-                  "twitter": "#"
+                  "x": "#"
                 }
               },
               {
@@ -422,7 +665,7 @@
                   "facebook": "#",
                   "instagram": "#",
                   "linkedin": "#",
-                  "twitter": "#"
+                  "x": "#"
                 }
               },
               {
@@ -434,7 +677,7 @@
                   "facebook": "#",
                   "instagram": "#",
                   "linkedin": "#",
-                  "twitter": "#"
+                  "x": "#"
                 }
               }
             ]
@@ -449,28 +692,796 @@
             "headingPart2": "Near",
             "items": [
               {
-                "slug": "creative-birthday-party-ideas",
+                "slug": "creative-birthday-party-ideas-0",
                 "image": "/images/about/about-1.jpg",
                 "date": "Oct 12, 2026",
                 "title": "Creative Birthday Party Ideas for All Ages",
                 "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
-                "author": "Priya Verma"
+                "author": "Priya Verma",
+                "badge": {
+                  "day": "12",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Creative Birthday Party Ideas ",
+                "titlePart2": "for All Ages",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
               },
               {
-                "slug": "perfect-outdoor-celebration",
+                "slug": "perfect-outdoor-celebration-0",
                 "image": "/images/about/about-1.jpg",
                 "date": "Oct 10, 2026",
                 "title": "How to Plan a Perfect Outdoor Celebration",
                 "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
-                "author": "Amit Singh"
+                "author": "Amit Singh",
+                "badge": {
+                  "day": "10",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "How to Plan a Perfect Outdoor  ",
+                "titlePart2": "Celebration",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
               },
               {
-                "slug": "theme-decoration-trends",
+                "slug": "theme-decoration-trends-0",
                 "image": "/images/about/about-1.jpg",
                 "date": "Oct 05, 2026",
                 "title": "Top Theme Decoration Trends This Year",
                 "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
-                "author": "Rohit Sharma"
+                "author": "Rohit Sharma",
+                "badge": {
+                  "day": "05",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Top Theme Decoration Trends ",
+                "titlePart2": " This Year",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "creative-birthday-party-ideas-1",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 12, 2026",
+                "title": "Creative Birthday Party Ideas for All Ages ",
+                "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
+                "author": "Priya Verma",
+                "badge": {
+                  "day": "12",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Creative Birthday Party Ideas  ",
+                "titlePart2": "for All Ages",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "perfect-outdoor-celebration-1",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 10, 2026",
+                "title": "How to Plan a Perfect Outdoor Celebration",
+                "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
+                "author": "Amit Singh",
+                "badge": {
+                  "day": "10",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "How to Plan a Perfect Outdoor  ",
+                "titlePart2": "Celebration",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "theme-decoration-trends-1",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 05, 2026",
+                "title": "Top Theme Decoration Trends This Year ",
+                "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
+                "author": "Rohit Sharma",
+                "badge": {
+                  "day": "05",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Top Theme Decoration Trends  ",
+                "titlePart2": "This Year",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "creative-birthday-party-ideas-2",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 12, 2026",
+                "title": "Creative Birthday Party Ideas ",
+                "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
+                "author": "Priya Verma",
+                "badge": {
+                  "day": "12",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Creative Birthday Party Ideas  ",
+                "titlePart2": "for All Ages",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "perfect-outdoor-celebration-2",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 10, 2026",
+                "title": "How to Plan a Perfect Outdoor Celebration ",
+                "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
+                "author": "Amit Singh",
+                "badge": {
+                  "day": "10",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "How to Plan a Perfect Outdoor Celebration ",
+                "titlePart2": "Celebration",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "theme-decoration-trends-2",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 05, 2026",
+                "title": "Top Theme Decoration Trends This Year ",
+                "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
+                "author": "Rohit Sharma",
+                "badge": {
+                  "day": "05",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Top Theme Decoration Trends This Year ",
+                "titlePart2": "This Year",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "creative-birthday-party-ideas-3",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 12, 2026",
+                "title": "Creative Birthday Party Ideas for All Ages ",
+                "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
+                "author": "Priya Verma",
+                "badge": {
+                  "day": "12",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Creative Birthday Party Ideas  ",
+                "titlePart2": "for All Ages",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "perfect-outdoor-celebration-3",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 10, 2026",
+                "title": "How to Plan a Perfect Outdoor Celebration ",
+                "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
+                "author": "Amit Singh",
+                "badge": {
+                  "day": "10",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "How to Plan a Perfect Outdoor Celebration ",
+                "titlePart2": "Celebration",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "theme-decoration-trends-3",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 05, 2026",
+                "title": "Top Theme Decoration Trends This Year ",
+                "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
+                "author": "Rohit Sharma",
+                "badge": {
+                  "day": "05",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Top Theme Decoration Trends  ",
+                "titlePart2": "This Year",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "creative-birthday-party-ideas-4",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 12, 2026",
+                "title": "Creative Birthday Party Ideas for All Ages ",
+                "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
+                "author": "Priya Verma",
+                "badge": {
+                  "day": "12",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Creative Birthday Party Ideas  ",
+                "titlePart2": "for All Ages",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "perfect-outdoor-celebration-4",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 10, 2026",
+                "title": "How to Plan a Perfect Outdoor Celebration ",
+                "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
+                "author": "Amit Singh",
+                "badge": {
+                  "day": "10",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "How to Plan a Perfect Outdoor Celebration ",
+                "titlePart2": "Celebration",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "theme-decoration-trends-4",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 05, 2026",
+                "title": "Top Theme Decoration Trends This Year ",
+                "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
+                "author": "Rohit Sharma",
+                "badge": {
+                  "day": "05",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Top Theme Decoration Trends This Year ",
+                "titlePart2": "This Year ",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "creative-birthday-party-ideas-5",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 12, 2026",
+                "title": "Creative Birthday Party Ideas for All Ages (Part 6)",
+                "description": "Discover unique and fun themes to make your next birthday truly unforgettable.",
+                "author": "Priya Verma",
+                "badge": {
+                  "day": "12",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Creative Birthday Party Ideas for All Ages ",
+                "titlePart2": "(Part 6)",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "perfect-outdoor-celebration-5",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 10, 2026",
+                "title": "How to Plan a Perfect Outdoor Celebration (Part 6)",
+                "description": "Tips and tricks for organizing a flawless outdoor birthday party in any season.",
+                "author": "Amit Singh",
+                "badge": {
+                  "day": "10",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "How to Plan a Perfect Outdoor Celebration ",
+                "titlePart2": "(Part 6)",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
+              },
+              {
+                "slug": "theme-decoration-trends-5",
+                "image": "/images/about/about-1.jpg",
+                "date": "Oct 05, 2026",
+                "title": "Top Theme Decoration Trends This Year (Part 6)",
+                "description": "Stay ahead of the curve with the most popular aesthetic trends for events this year.",
+                "author": "Rohit Sharma",
+                "badge": {
+                  "day": "05",
+                  "month": "Oct",
+                  "year": "2026"
+                },
+                "titlePart1": "Top Theme Decoration Trends This Year ",
+                "titlePart2": "(Part 6)",
+                "category": "Event Planning",
+                "detailedContent": {
+                  "quote": {
+                    "text": "A birthday is not just a celebration of age, but a celebration of the moments, people, and memories that make life beautiful.",
+                    "author": "Mark Wood"
+                  },
+                  "subheading1": {
+                    "part1": "Planning the Perfect ",
+                    "part2": "Birthday Party"
+                  },
+                  "paragraph1": "Planning a birthday party starts with choosing a theme that matches the personality and interests of the person. You can go for a classic theme, a modern setup, or something unique like a movie night, outdoor picnic, or a customized décor. Don't forget to plan engaging activities, music, and tasty food to keep your guests entertained throughout the event.",
+                  "images": [
+                    "/images/gallery/gallery-1.webp",
+                    "/images/gallery/gallery-2.webp",
+                    "/images/gallery/gallery-3.webp"
+                  ],
+                  "subheading2": {
+                    "part1": "Tips for a ",
+                    "part2": "Memorable Celebration"
+                  },
+                  "tips": [
+                    "Choose a theme that suits the age group and interests.",
+                    "Plan creative decorations and a beautiful setup.",
+                    "Arrange engaging games and entertainment activities.",
+                    "Serve delicious food and beverages.",
+                    "Capture the special moments with photos and videos."
+                  ],
+                  "conclusion": "With the right planning and attention to detail, you can create a birthday party that everyone will remember for years to come.\nLet your imagination run wild and make the celebration truly special!"
+                }
               }
             ],
             "buttonText": "View More Blog"
@@ -480,31 +1491,44 @@
       "FAQ": {
         "variants": {
           "BirthdayFAQ1": {
+            "headingPart1": "Frequently ",
+            "headingPart2": "Asked Questions",
+            "description": "Find answers to the most common questions about our event planning services. If you need more information, feel free to contact our team.",
+            "image": "/images/about/about-1.jpg",
+            "bottomBanner": {
+              "eyebrow": "STILL HAVE QUESTIONS?",
+              "heading": "We're Here to Help!",
+              "description": "Our team is always ready to assist you with personalized support and expert advice for your special event.",
+              "buttonText": "Contact Us",
+              "buttonLink": "/contact",
+              "icon": "MessageCircleQuestion",
+              "buttonIcon": "ArrowRight"
+            },
             "cursiveText": "FAQ",
-            "headingPart1": "Frequently Asked",
-            "headingPart2": "Questions",
-            "description": "Find answers to the most common questions about our event planning services.",
-            "image": "/images/faq/faq.webp",
             "items": [
               {
-                "question": "How early should I book your services?",
-                "answer": "We recommend booking at least 4-6 weeks in advance to ensure availability and proper planning time."
+                "question": "What is event planning?",
+                "answer": "Event planning is the process of organizing and managing all details of an event, including venue, decoration, catering, entertainment, and coordination, to ensure a smooth and memorable experience."
               },
               {
-                "question": "Can you customize a package based on my budget?",
-                "answer": "Yes! We offer tailored packages to meet your specific budget and requirements without compromising quality."
+                "question": "How long does it take to plan an event?",
+                "answer": "It depends on the scale of the event. Small parties may take a few weeks, while large events like weddings can take several months of planning."
               },
               {
-                "question": "Do you provide venue options?",
-                "answer": "Absolutely. We have partnerships with numerous venues and will present you with options that fit your theme."
+                "question": "What types of events do you plan?",
+                "answer": "We specialize in birthday parties, anniversaries, corporate events, baby showers, and specialized themed events."
               },
               {
-                "question": "What happens if I need to cancel my event?",
-                "answer": "We have a flexible cancellation policy. Please refer to our contract terms for detailed information on deposits and timelines."
+                "question": "What is included in your event planning services?",
+                "answer": "Our services include venue selection, theme and decor setup, catering coordination, entertainment booking, and on-site management."
               },
               {
-                "question": "Do you handle food and catering as well?",
-                "answer": "Yes, we work with top-tier catering partners to provide exquisite menus customized for your guests."
+                "question": "Do you provide wedding planning services?",
+                "answer": "While we specialize in birthdays, we also have partners and dedicated packages for complete wedding planning and coordination."
+              },
+              {
+                "question": "Can you handle both small and large events?",
+                "answer": "Absolutely! We scale our team and resources based on the size and requirements of your event."
               }
             ]
           }
@@ -516,6 +1540,10 @@
             "description": "Creating magical moments and unforgettable memories for your special day.",
             "quickLinks": [
               {
+                "name": "Home",
+                "href": "/"
+              },
+              {
                 "name": "About Us",
                 "href": "/about"
               },
@@ -526,6 +1554,10 @@
               {
                 "name": "Gallery",
                 "href": "/gallery"
+              },
+              {
+                "name": "FAQ",
+                "href": "/faq"
               },
               {
                 "name": "Blog",
@@ -566,22 +1598,26 @@
               {
                 "name": "Facebook",
                 "icon": "facebook",
-                "href": "#"
+                "href": "https://facebook.com",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z\"/></svg>"
               },
               {
                 "name": "Instagram",
                 "icon": "instagram",
-                "href": "#"
+                "href": "https://instagram.com",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"2\" y=\"2\" width=\"20\" height=\"20\" rx=\"5\" ry=\"5\"/><path d=\"M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z\"/><line x1=\"17.5\" y1=\"6.5\" x2=\"17.51\" y2=\"6.5\"/></svg>"
               },
               {
-                "name": "Twitter",
-                "icon": "twitter",
-                "href": "#"
+                "name": "X",
+                "icon": "x",
+                "href": "https://x.com",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"currentColor\" stroke=\"none\"><path d=\"M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 22.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 5.92H5.078z\"/></svg>"
               },
               {
-                "name": "LinkedIn",
-                "icon": "linkedin",
-                "href": "#"
+                "name": "Youtube",
+                "icon": "youtube",
+                "href": "https://youtube.com",
+                "svg": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.42a2.78 2.78 0 0 0-1.94 2C1 8.17 1 12 1 12s0 3.83.46 5.58a2.78 2.78 0 0 0 1.94 2C5.12 20 12 20 12 20s6.88 0 8.6-.42a2.78 2.78 0 0 0 1.94-2C23 15.83 23 12 23 12s0-3.83-.46-5.58z\"/><polygon points=\"9.75 15.02 15.5 12 9.75 8.98 9.75 15.02\"/></svg>"
               }
             ],
             "contact": {
@@ -590,7 +1626,16 @@
                 "+1 000-000-000",
                 "+1 000-000-000"
               ],
-              "address": "123 Event Street, Celebration City, IN 400001"
+              "address": "456 Central Ave, Suite 200, Los Angeles, CA 90012, USA"
+            },
+            "quickLinksTitle": "Quick Links",
+            "servicesTitle": "Our Services",
+            "contactTitle": "Contact Us",
+            "copyrightText": "© 2026 All Rights Reserved. Powered by Lestow",
+            "contactIcons": {
+              "email": "Mail",
+              "address": "MapPin",
+              "phone": "Phone"
             }
           }
         }
@@ -665,6 +1710,40 @@
               "label": "Blog"
             }
           ]
+        },
+        "faq": {
+          "title": "FAQ",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "FAQ",
+              "href": "/faq"
+            }
+          ],
+          "image": "/images/pageBanner.webp",
+          "bgText": "FAQ"
+        },
+        "blogDetail": {
+          "title": "Blog Details",
+          "bgText": "BLOG",
+          "image": "/images/pageBanner.webp",
+          "breadcrumbs": [
+            {
+              "label": "Home",
+              "href": "/"
+            },
+            {
+              "label": "Blog",
+              "href": "/blog"
+            },
+            {
+              "label": "Blog Details",
+              "href": "#"
+            }
+          ]
         }
       },
       "Contact": {
@@ -689,7 +1768,212 @@
             ],
             "buttonText": "Submit Now",
             "successTitle": "Message Sent Successfully!",
-            "successDescription": "Thank you for contacting us. Our team will get back to you soon with the best suggestions for your celebration."
+            "successDescription": "Thank you for contacting us. Our team will get back to you soon with the best suggestions for your celebration.",
+            "contactCards": [
+              {
+                "title": "Our Location",
+                "details": [
+                  "456 Central Ave, Suite 200,",
+                  "Los Angeles,",
+                  "CA 90012, USA"
+                ],
+                "icon": "MapPin"
+              },
+              {
+                "title": "Email Us",
+                "details": [
+                  "info@xyz.com",
+                  "info@xyz.com"
+                ],
+                "icon": "Mail"
+              },
+              {
+                "title": "Call Us",
+                "details": [
+                  "+1 000-000-000",
+                  "+1 000-000-000"
+                ],
+                "icon": "Phone"
+              }
+            ],
+            "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2527999818!2d-74.14448742517873!3d40.69766374872161!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1714151234567!5m2!1sen!2sin"
+          }
+        }
+      },
+      "AboutPage": {
+        "variants": {
+          "BirthdayAboutPage1": {
+            "cursiveText": "ABOUT US",
+            "headingPart1": "Making Every Celebration",
+            "headingPart2": "Truly Special",
+            "paragraph1": "At BdayJunction, we believe every birthday deserves to be celebrated in a unique and memorable way. We plan, design, and manage beautiful birthday events tailored to your needs, making your special day stress-free and full of joy.",
+            "paragraph2": "From concept to execution, our team takes care of every detail with creativity and passion, ensuring a seamless and unforgettable celebration for you and your loved ones.",
+            "image1": "/images/about/about-1.jpg",
+            "image2": "/images/about/about-1.jpg",
+            "image3": "/images/about/about-1.jpg"
+          }
+        }
+      },
+      "WhyChooseUs": {
+        "variants": {
+          "BirthdayWhyChooseUs1": {
+            "cursiveText": "WHY CHOOSE US",
+            "headingPart1": "Creating Unforgettable",
+            "headingPart2": "Moments for Your Special Day",
+            "description": "We are passionate about making your celebrations extraordinary. From creative themes to flawless execution, we ensure every detail is planned with care and perfection.",
+            "image": "/images/about/about-1.jpg",
+            "features": [
+              {
+                "icon": "Users",
+                "title": "Expert Planning",
+                "text": "Our experienced team handles every detail with creativity and precision."
+              },
+              {
+                "icon": "Lightbulb",
+                "title": "Unique Themes",
+                "text": "We design customized themes to match your style and make your event special."
+              },
+              {
+                "icon": "Diamond",
+                "title": "Quality Decoration",
+                "text": "Beautiful and elegant decorations that create the perfect celebration atmosphere."
+              },
+              {
+                "icon": "ConciergeBell",
+                "title": "Delicious Catering",
+                "text": "A variety of tasty menu options to delight your guests of all ages."
+              },
+              {
+                "icon": "Camera",
+                "title": "Photography & Videography",
+                "text": "Capture your precious moments with professional photo and video coverage."
+              },
+              {
+                "icon": "Heart",
+                "title": "Memorable Experience",
+                "text": "We focus on creating joyful, stress-free, and unforgettable celebrations for you and your loved ones."
+              }
+            ]
+          }
+        }
+      },
+      "Gallery": {
+        "variants": {
+          "BirthdayGallery1": {
+            "eyebrow": "OUR GALLERY",
+            "headingPart1": "Moments from Our ",
+            "headingPart2": "Celebrations",
+            "description": "Take a look at some of the beautiful moments from our past events. From joyful celebrations to unforgettable experiences, every event tells a special story.",
+            "images": [
+              "/images/gallery/gallery-1.webp",
+              "/images/gallery/gallery-2.webp",
+              "/images/gallery/gallery-3.webp",
+              "/images/gallery/gallery-4.webp",
+              "/images/gallery/gallery-5.webp",
+              "/images/gallery/gallery-6.webp",
+              "/images/gallery/gallery-1.webp",
+              "/images/gallery/gallery-2.webp",
+              "/images/gallery/gallery-3.webp",
+              "/images/gallery/gallery-4.webp",
+              "/images/gallery/gallery-5.webp",
+              "/images/gallery/gallery-6.webp",
+              "/images/gallery/gallery-1.webp",
+              "/images/gallery/gallery-2.webp",
+              "/images/gallery/gallery-3.webp",
+              "/images/gallery/gallery-4.webp",
+              "/images/gallery/gallery-5.webp",
+              "/images/gallery/gallery-6.webp",
+              "/images/gallery/gallery-1.webp",
+              "/images/gallery/gallery-2.webp",
+              "/images/gallery/gallery-3.webp",
+              "/images/gallery/gallery-4.webp",
+              "/images/gallery/gallery-5.webp",
+              "/images/gallery/gallery-6.webp"
+            ]
+          }
+        }
+      },
+      "VideoGallery": {
+        "variants": {
+          "BirthdayVideoGallery1": {
+            "eyebrow": "OUR VIDEOS",
+            "headingPart1": "Watch Our ",
+            "headingPart2": "Special Moments",
+            "description": "Experience the joy, happiness, and unforgettable memories through our event videos. From beautiful decorations to magical celebrations, see how we bring your special day to life.",
+            "videos": [
+              {
+                "title": "Birthday Decoration Setup",
+                "duration": "02:35",
+                "thumbnail": "/images/gallery/gallery-1.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Birthday Party Highlights",
+                "duration": "03:12",
+                "thumbnail": "/images/gallery/gallery-2.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Theme Decoration Ideas",
+                "duration": "01:48",
+                "thumbnail": "/images/gallery/gallery-3.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Cake Cutting Moments",
+                "duration": "02:20",
+                "thumbnail": "/images/gallery/gallery-4.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Outdoor Birthday Celebration",
+                "duration": "03:01",
+                "thumbnail": "/images/gallery/gallery-5.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Guest Reactions",
+                "duration": "02:45",
+                "thumbnail": "/images/gallery/gallery-6.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Surprise Party Setup",
+                "duration": "04:10",
+                "thumbnail": "/images/gallery/gallery-1.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Magician Performance",
+                "duration": "05:30",
+                "thumbnail": "/images/gallery/gallery-2.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Dance Floor Fun",
+                "duration": "02:15",
+                "thumbnail": "/images/gallery/gallery-3.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Kids Games & Activities",
+                "duration": "03:45",
+                "thumbnail": "/images/gallery/gallery-4.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Return Gifts Distribution",
+                "duration": "01:50",
+                "thumbnail": "/images/gallery/gallery-5.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              },
+              {
+                "title": "Family Portraits",
+                "duration": "02:05",
+                "thumbnail": "/images/gallery/gallery-6.webp",
+                "url": "https://www.youtube.com/embed/dQw4w9WgXcQ"
+              }
+            ]
           }
         }
       }

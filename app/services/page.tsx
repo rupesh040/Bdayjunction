@@ -7,7 +7,7 @@ export default function ServicesPage() {
     <>
       <PageBanner {...pageBanners.services} />
       <div className="pt-20">
-      <ServicesSection />
+        <ServicesSection paginate />
       </div>
     </>
   );

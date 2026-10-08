@@ -2,298 +2,211 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import * as LucideIcons from "lucide-react";
 import { faq } from "@/data";
 
-export default function FAQ() {
-  const {
-    cursiveText: eyebrow,
-    headingPart1,
-    headingPart2,
-    description,
-    image,
-    items,
-  } = faq;
+export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(0); 
 
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
-  const toggleFAQ = (index: number) => {
-    setOpenIndex((prev) => (prev === index ? null : index));
+  const toggleFaq = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fff6fa] py-14 sm:py-16 md:py-20 lg:py-24">
-      <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#f5a5d0]/30 blur-[120px]" />
-
-      <div className="pointer-events-none absolute bottom-0 left-[20%] h-[350px] w-[350px] rounded-full bg-[#9d59d5]/20 blur-[120px]" />
-
-      <div className="pointer-events-none absolute right-[-150px] top-[-100px] h-[400px] w-[400px] rounded-full bg-[#ffb5d2]/20 blur-[120px]" />
-
-      <div className="relative z-10 mx-auto max-w-[1500px]">
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-12 xl:gap-16">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
+    <section className="py-20 bg-[#fffcfd]">
+      <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-4 mb-4">
+            <span className="text-[#df1762] font-bold text-[13px] tracking-[0.2em] uppercase">
+              {faq.cursiveText}
+            </span>
+            <span className="w-16 h-[2px] bg-[#df1762]"></span>
+          </div>
+          <h2 className="text-[36px] md:text-[46px] lg:text-[50px] font-extrabold text-[#01174a] mb-5 leading-[1.1] tracking-[-1px]">
+            {faq.headingPart1} <span className="text-[#df1762]">{faq.headingPart2}</span>
+          </h2>
+          <p className="text-[#596274] text-[15px] sm:text-[17px] max-w-[700px] mx-auto leading-relaxed">
+            {faq.description}
+          </p>
+        </div>
+        <div className="flex flex-col xl:flex-row gap-8 lg:gap-10 mb-16 items-start">
+          <motion.div 
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{
-              duration: 0.8,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative"
+            viewport={{ once: true }}
+            className="w-full xl:w-[30%] shrink-0 relative rounded-[24px] overflow-hidden shadow-xl h-[400px] xl:h-[480px]"
           >
-            <div className="pl-5 sm:pl-8 md:pl-10 lg:pl-12 xl:pl-14 pr-5 sm:pr-8 md:pr-10 lg:pr-0">
-              <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.6,
-                delay: 0.1,
-              }}
-              className="mb-4 flex items-center gap-3"
-            >
-              <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#e62b77] sm:text-xs">
-                {eyebrow}
-              </span>
-
-              <span className="h-[2px] w-12 bg-[#e62b77] sm:w-14" />
-            </motion.div>
-
-            <motion.h2
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.75,
-                delay: 0.15,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="max-w-[700px] text-[38px] font-extrabold leading-[1.03] tracking-[-1.8px] text-[#10213e] sm:text-[44px] md:text-[50px] lg:text-[47px] xl:text-[54px]"
-            >
-              {headingPart1}{" "}
-              <span className="text-[#ed2671]">{headingPart2}</span>
-            </motion.h2>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: 0.25,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="mt-4 w-full text-[14px] leading-6 text-[#5d6679] sm:text-[15px] sm:leading-7 md:text-[16px]"
-            >
-              {description}
-            </motion.p>
-            </div>
-
-            <motion.div
-              initial={{
-                opacity: 0,
-                y: 35,
-                scale: 0.97,
-              }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                scale: 1,
-              }}
-              viewport={{
-                once: true,
-                amount: 0.1,
-              }}
-              transition={{
-                duration: 0.9,
-                delay: 0.3,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="relative mt-5 overflow-hidden aspect-[4.5/3]"
-              style={{
-                marginLeft: `calc(-1 * (100vw - min(100vw, 1500px)) / 2)`,
-                width: `calc(100% + (100vw - min(100vw, 1500px)) / 2)`
-              }}
-            >
-              <motion.div
-                animate={{
-                  scale: [1, 1.015, 1],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="absolute inset-0"
-              >
-                <Image
-                  src={image}
-                  alt="Birthday event speaker"
-                  fill
-                  sizes="(max-width: 1440px) 200vw, 100vw"
-                  className="object-cover object-center"
-                />
-              </motion.div>
-              
-              {/* Gradients to blend the image */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-[#fff6fa]/40 via-transparent via-[35%] to-transparent" />
-              {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#fcdfee] via-transparent via-[35%] to-transparent" /> */}
-              <div className="w-[100vw] h-32 pointer-events-none absolute inset-0 bg-gradient-to-b from-[#fcdfee] via-transparent to-transparent" />
-              
-              {/* Right edge blending gradient */}
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-1/3 bg-gradient-to-l from-[#fff6fa] to-transparent z-10" />
-
-              <motion.div
-                animate={{
-                  x: [0, 15, 0],
-                  y: [0, -10, 0],
-                  opacity: [0.25, 0.4, 0.25],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="pointer-events-none absolute bottom-[-60px] left-[-50px] h-48 w-48 rounded-full bg-[#ec3988]/50 blur-[70px]"
-              />
-
-              <motion.div
-                animate={{
-                  x: [0, -12, 0],
-                  y: [0, 8, 0],
-                  opacity: [0.2, 0.35, 0.2],
-                }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: "easeInOut",
-                }}
-                className="pointer-events-none absolute right-[-50px] top-[20%] h-44 w-44 rounded-full bg-[#8c43c5]/40 blur-[75px]"
-              />
-            </motion.div>
+            <Image 
+              src={(faq as any).image} 
+              alt="FAQ" 
+              fill 
+              className="object-cover"
+              sizes="(max-width: 1280px) 100vw, 30vw"
+            />
           </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, x: 45 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, amount: 0.15 }}
-            transition={{
-              duration: 0.8,
-              delay: 0.15,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="w-full px-5 sm:px-8 md:px-10 lg:pl-0 lg:pr-12 xl:pr-14"
-          >
-            <div className="space-y-2.5 sm:space-y-3">
-              {items.map((item, index) => {
-                const isOpen = openIndex === index;
+          <div className="flex-1 w-full flex flex-col md:flex-row gap-4 lg:gap-6">
+            <div className="flex-1 flex flex-col gap-4 lg:gap-6">
+              {(faq.items || []).slice(0, Math.ceil((faq.items || []).length / 2)).map((item, index) => {
+                const globalIndex = index;
+                const isOpen = openIndex === globalIndex;
+                const number = (globalIndex + 1).toString().padStart(2, "0");
 
                 return (
                   <motion.div
-                    key={`${item.question}-${index}`}
-                    initial={{
-                      opacity: 0,
-                      x: 25,
-                    }}
-                    whileInView={{
-                      opacity: 1,
-                      x: 0,
-                    }}
-                    viewport={{
-                      once: true,
-                      amount: 0.1,
-                    }}
-                    transition={{
-                      duration: 0.5,
-                      delay: index * 0.07,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
+                    key={globalIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: globalIndex * 0.05 }}
+                    className={`h-fit rounded-[20px] overflow-hidden transition-all duration-300 border ${
+                      isOpen ? 'bg-white border-[#f8c6d7] shadow-[0_15px_40px_rgba(218,48,112,0.08)]' : 'bg-white/60 border-[#f8c6d7]/50 shadow-[0_8px_30px_rgba(218,48,112,0.03)] hover:bg-white'
+                    }`}
                   >
-                    <div
-                      className={`overflow-hidden rounded-[14px] border transition-all duration-300 ${
-                        isOpen
-                          ? "border-transparent shadow-[0_10px_30px_rgba(214,40,115,0.10)]"
-                          : "border-[#f5cddd] bg-white/55"
-                      }`}
+                    <button
+                      onClick={() => toggleFaq(globalIndex)}
+                      className="w-full flex items-center justify-between p-5 text-left"
                     >
-                      <motion.button
-                        type="button"
-                        onClick={() => toggleFAQ(index)}
-                        whileTap={{ scale: 0.995 }}
-                        aria-expanded={isOpen}
-                        aria-controls={`faq-answer-${index}`}
-                        className={`flex min-h-[56px] w-full items-center justify-between gap-4 px-5 py-3.5 text-left sm:min-h-[60px] sm:px-6 ${
-                          isOpen
-                            ? "bg-gradient-to-r from-[#5420d2] via-[#a52ac0] to-[#f52772] text-white"
-                            : "bg-white/60 text-[#15233e] hover:bg-white"
-                        }`}
-                      >
-                        <span className="flex min-w-0 items-center gap-3 text-[13px] font-bold sm:text-[15px] md:text-[16px]">
-                          <span className="shrink-0">
-                            {index + 1}.
-                          </span>
-
-                          <span>{item.question}</span>
+                      <div className="flex items-center gap-4">
+                        <span className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#ffe0eb] text-[#df1762] font-bold text-[14px]">
+                          {number}
                         </span>
+                        <span className="font-bold text-[#10213e] text-[15px] sm:text-[16px] pr-4">
+                          {item.question}
+                        </span>
+                      </div>
+                      <motion.div
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-[#df1762] shrink-0"
+                      >
+                        <LucideIcons.ChevronDown strokeWidth={2.5} size={20} />
+                      </motion.div>
+                    </button>
 
-                        <motion.span
-                          animate={{
-                            rotate: isOpen ? 180 : 0,
-                          }}
-                          transition={{
-                            duration: 0.3,
-                            ease: [0.22, 1, 0.36, 1],
-                          }}
-                          className="flex h-7 w-7 shrink-0 items-center justify-center"
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
                         >
-                          <ChevronDown
-                            size={21}
-                            strokeWidth={2.5}
-                          />
-                        </motion.span>
-                      </motion.button>
-
-                      <AnimatePresence initial={false}>
-                        {isOpen && (
-                          <motion.div
-                            id={`faq-answer-${index}`}
-                            initial={{
-                              height: 0,
-                              opacity: 0,
-                            }}
-                            animate={{
-                              height: "auto",
-                              opacity: 1,
-                            }}
-                            exit={{
-                              height: 0,
-                              opacity: 0,
-                            }}
-                            transition={{
-                              height: {
-                                duration: 0.4,
-                                ease: [0.22, 1, 0.36, 1],
-                              },
-                              opacity: {
-                                duration: 0.25,
-                              },
-                            }}
-                            className="overflow-hidden bg-white"
-                          >
-                            <div className="px-5 pb-5 pt-4 text-[13px] leading-6 text-[#626c7e] sm:px-6 sm:text-[14px] sm:leading-7">
-                              {item.answer}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
+                          <div className="px-5 pb-6 pt-2 pl-[76px] text-[#596274] text-[14px] leading-relaxed">
+                            {item.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </motion.div>
                 );
               })}
             </div>
-          </motion.div>
+
+            <div className="flex-1 flex flex-col gap-4 lg:gap-6">
+              {(faq.items || []).slice(Math.ceil((faq.items || []).length / 2)).map((item, index) => {
+                const globalIndex = index + Math.ceil((faq.items || []).length / 2);
+                const isOpen = openIndex === globalIndex;
+                const number = (globalIndex + 1).toString().padStart(2, "0");
+
+                return (
+                  <motion.div
+                    key={globalIndex}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: globalIndex * 0.05 }}
+                    className={`h-fit rounded-[20px] overflow-hidden transition-all duration-300 border ${
+                      isOpen ? 'bg-white border-[#f8c6d7] shadow-[0_15px_40px_rgba(218,48,112,0.08)]' : 'bg-white/60 border-[#f8c6d7]/50 shadow-[0_8px_30px_rgba(218,48,112,0.03)] hover:bg-white'
+                    }`}
+                  >
+                    <button
+                      onClick={() => toggleFaq(globalIndex)}
+                      className="w-full flex items-center justify-between p-5 text-left"
+                    >
+                      <div className="flex items-center gap-4">
+                        <span className="flex items-center justify-center w-10 h-10 shrink-0 rounded-full bg-[#ffe0eb] text-[#df1762] font-bold text-[14px]">
+                          {number}
+                        </span>
+                        <span className="font-bold text-[#10213e] text-[15px] sm:text-[16px] pr-4">
+                          {item.question}
+                        </span>
+                      </div>
+                      <motion.div
+                        animate={{ rotate: isOpen ? 180 : 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="text-[#df1762] shrink-0"
+                      >
+                        <LucideIcons.ChevronDown strokeWidth={2.5} size={20} />
+                      </motion.div>
+                    </button>
+
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3 }}
+                        >
+                          <div className="px-5 pb-6 pt-2 pl-[76px] text-[#596274] text-[14px] leading-relaxed">
+                            {item.answer}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </motion.div>
+                );
+              })}
+            </div>
+          </div>
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="bg-[#fff0f6] rounded-[24px] p-8 sm:p-10 flex flex-col md:flex-row items-center gap-8 md:gap-10 justify-between relative overflow-hidden"
+        >
+          <div className="absolute -right-20 -bottom-20 w-80 h-80 bg-[#ffe0eb] rounded-full blur-[80px] opacity-60 pointer-events-none"></div>
+
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6 sm:gap-8 z-10 w-full md:w-auto">
+            <div className="flex items-center justify-center w-[70px] h-[70px] sm:w-[90px] sm:h-[90px] shrink-0 bg-white rounded-[24px] shadow-sm text-[#df1762]">
+              {(() => {
+                const Icon = (LucideIcons as any)[(faq as any).bottomBanner?.icon] || LucideIcons.MessageCircleQuestion;
+                return <Icon strokeWidth={1.5} size={40} className="sm:w-12 sm:h-12" />;
+              })()}
+            </div>
+            
+            <div>
+              <span className="text-[#df1762] font-bold text-[12px] tracking-[0.1em] uppercase mb-2 block">
+                {(faq as any).bottomBanner.eyebrow}
+              </span>
+              <h3 className="text-[28px] sm:text-[32px] font-extrabold text-[#01174a] mb-2 leading-tight">
+                {(faq as any).bottomBanner.heading}
+              </h3>
+              <p className="text-[#596274] text-[14px] sm:text-[15px] max-w-[500px]">
+                {(faq as any).bottomBanner.description}
+              </p>
+            </div>
+          </div>
+
+          <Link href={(faq as any).bottomBanner.buttonLink} className="z-10 w-full md:w-auto shrink-0 mt-2 md:mt-0">
+            <motion.div 
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="w-full sm:w-auto bg-gradient-to-r from-[#df1762] to-[#b11b7d] text-white font-bold py-4 px-10 rounded-full flex items-center justify-center gap-3 shadow-[0_8px_20px_rgba(223,23,98,0.25)] cursor-pointer"
+            >
+              {(faq as any).bottomBanner.buttonText} 
+              {(() => {
+                const BtnIcon = (LucideIcons as any)[(faq as any).bottomBanner?.buttonIcon] || LucideIcons.ArrowRight;
+                return <BtnIcon size={18} />;
+              })()}
+            </motion.div>
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

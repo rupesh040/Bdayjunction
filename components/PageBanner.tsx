@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { ChevronRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface Breadcrumb {
   label: string;
@@ -14,11 +17,16 @@ interface PageBannerProps {
   breadcrumbs: Breadcrumb[];
 }
 
-export default function PageBanner({ title, bgText, image, breadcrumbs }: PageBannerProps) {
+export default function PageBanner({ title, bgText, image, breadcrumbs = [] }: PageBannerProps) {
   return (
     <section className="relative w-full overflow-hidden bg-[#243343] py-20 md:py-28 lg:py-32">
       {image && (
-        <div className="absolute inset-0 z-0">
+        <motion.div 
+          initial={{ scale: 1 }}
+          animate={{ scale: 1.05 }}
+          transition={{ duration: 20, ease: "linear", repeat: Infinity, repeatType: "reverse" }}
+          className="absolute inset-0 z-0"
+        >
           <Image
             src={image}
             alt={title}
@@ -26,18 +34,29 @@ export default function PageBanner({ title, bgText, image, breadcrumbs }: PageBa
             className="object-cover object-center opacity-30"
             priority
           />
-        </div>
+        </motion.div>
       )}
 
       <div className="absolute inset-0 bg-[#243343]/80 z-0" />
 
       <div className="relative z-10 mx-auto max-w-[1500px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 h-full flex flex-col justify-center">
         
-        <h1 className="mb-4 text-[42px] md:text-[54px] lg:text-[64px] font-bold text-white tracking-tight">
+        <motion.h1 
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-4 text-[42px] md:text-[54px] lg:text-[64px] font-bold text-white tracking-tight"
+        >
           {title}
-        </h1>
+        </motion.h1>
 
-        <nav aria-label="Breadcrumb" className="flex items-center gap-2">
+        <motion.nav 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
+          aria-label="Breadcrumb" 
+          className="flex items-center gap-2 flex-wrap"
+        >
           {breadcrumbs.map((crumb, index) => {
             const isLast = index === breadcrumbs.length - 1;
             return (
@@ -60,7 +79,7 @@ export default function PageBanner({ title, bgText, image, breadcrumbs }: PageBa
               </div>
             );
           })}
-        </nav>
+        </motion.nav>
       </div>
     </section>
   );

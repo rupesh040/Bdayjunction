@@ -18,7 +18,7 @@ export default function SectionHeading({
       </div>
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-dark mb-4 leading-tight">
         {title.split(' ').map((word, i) => {
-          // Highlight "Truly", "Special", "Clients", "Event" for demo purposes based on design
+          
           const highlight = ["Truly", "Special", "Clients", "Event", "Happening", "Questions"].includes(word);
           return (
             <span key={i} className={highlight ? "text-primary" : ""}>

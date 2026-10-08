@@ -7,7 +7,7 @@ export default function BlogPage() {
     <>
       <PageBanner {...pageBanners.blog} />
       <div className="pt-20">
-      <BlogSection />
+      <BlogSection isBlogPage={true} />
       </div>
     </>
   );

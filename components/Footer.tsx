@@ -4,15 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { MapPin, Mail, Phone } from "lucide-react";
-import { Facebook, Instagram, Twitter, Linkedin } from "@/components/icons";
+import * as LucideIcons from "lucide-react";
 import { site, footer as footerData, header, pageBanners, about, blog, services } from "@/data";
-
-const iconMap: Record<string, React.ReactNode> = {
-  facebook: <Facebook size={20} />,
-  instagram: <Instagram size={20} />,
-  twitter: <Twitter size={20} />,
-  linkedin: <Linkedin size={20} />,
-};
 
 const containerVariants = {
   hidden: {},
@@ -39,7 +32,7 @@ const itemVariants = {
 };
 
 export default function Footer() {
-  const footer = footerData;
+  const footer = footerData as any;
 
   return (
     <footer className="relative overflow-hidden bg-[#f5c9d3] text-[#01174a]">
@@ -88,7 +81,7 @@ export default function Footer() {
               variants={itemVariants}
               className="mt-7 flex flex-wrap gap-4"
             >
-              {footer.social.map((link, index) => (
+              {footer.social.map((link: any, index: number) => (
                 <motion.a
                   key={`${link.name}-${index}`}
                   href={link.href}
@@ -102,17 +95,26 @@ export default function Footer() {
                   transition={{ duration: 0.2 }}
                   className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#f8c6d7] shadow-sm"
                 >
-                  {iconMap[link.name.toLowerCase()]}
+                  {link.svg ? (
+                    <span dangerouslySetInnerHTML={{ __html: link.svg }} className="w-5 h-5 flex items-center justify-center" />
+                  ) : (
+                    (() => {
+                      const Icon = link.icon ? (LucideIcons as any)[
+                        link.icon.split("-").map((w: string) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()).join("")
+                      ] || LucideIcons.Link : LucideIcons.Link;
+                      return <Icon size={20} />;
+                    })()
+                  )}
                 </motion.a>
               ))}
             </motion.div>
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <FooterHeading title="Quick Links" />
+            <FooterHeading title={footer.quickLinksTitle || "Quick Links"} />
 
             <ul className="space-y-4">
-              {footer.quickLinks.map((link, index) => (
+              {footer.quickLinks.map((link: any, index: number) => (
                 <motion.li
                   key={`${link.name}-${index}`}
                   whileHover={{ x: 5 }}
@@ -133,10 +135,10 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <FooterHeading title="Our Services" />
+            <FooterHeading title={footer.servicesTitle || "Our Services"} />
 
             <ul className="space-y-4">
-              {footer.services.map((service, index) => (
+              {footer.services.map((service: any, index: number) => (
                 <motion.li
                   key={`${service.name}-${index}`}
                   whileHover={{ x: 5 }}
@@ -157,7 +159,7 @@ export default function Footer() {
           </motion.div>
 
           <motion.div variants={itemVariants}>
-            <FooterHeading title="Contact Us" />
+            <FooterHeading title={footer.contactTitle || "Contact Us"} />
 
             <div className="space-y-5">
               <ContactItem
@@ -179,7 +181,7 @@ export default function Footer() {
                 </div>
 
                 <div className="flex flex-col gap-1 pt-1">
-                  {footer.contact.phone.map((phone, index) => (
+                  {footer.contact.phone.map((phone: string, index: number) => (
                     <motion.a
                       key={`${phone}-${index}`}
                       href={`tel:${phone}`}
@@ -218,7 +220,7 @@ export default function Footer() {
           className="pt-6 text-center"
         >
           <p className="text-[13px] sm:text-[14px]">
-            © {site.name} 2026 | All Rights Reserved
+            {footer.copyrightText || `© ${site.name} 2026 | All Rights Reserved`}
           </p>
         </motion.div>
       </div>

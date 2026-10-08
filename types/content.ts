@@ -100,6 +100,10 @@ export interface BirthdayBlog1Item {
     date:        string;
     title:       string;
     description: string;
+    quickLinksTitle?: string;
+    servicesTitle?: string;
+    contactTitle?: string;
+    copyrightText?: string;
     author:      string;
 }
 
@@ -221,6 +225,7 @@ export interface PageBanners {
     services: AboutClass;
     gallery:  AboutClass;
     blog:     AboutClass;
+    faq:      AboutClass;
 }
 
 export interface AboutClass {
@@ -288,7 +293,7 @@ export interface ItemSocial {
     facebook:  string;
     instagram: string;
     linkedin:  string;
-    twitter:   string;
+    x:         string;
 }
 
 export interface Testimonial {
@@ -796,7 +801,7 @@ const typeMap: any = {
         { json: "facebook", js: "facebook", typ: "" },
         { json: "instagram", js: "instagram", typ: "" },
         { json: "linkedin", js: "linkedin", typ: "" },
-        { json: "twitter", js: "twitter", typ: "" },
+        { json: "x", js: "x", typ: "" },
     ], false),
     "Testimonial": o([
         { json: "variants", js: "variants", typ: r("TestimonialVariants") },
