@@ -96,7 +96,7 @@ export default function Footer() {
                   className="flex h-[56px] w-[56px] items-center justify-center rounded-full bg-[#f8c6d7] shadow-sm"
                 >
                   {link.svg ? (
-                    <span dangerouslySetInnerHTML={{ __html: link.svg }} className="w-5 h-5 flex items-center justify-center" />
+                    <span dangerouslySetInnerHTML={{ __html: link.svg }} className="w-[26px] h-[26px] [&>svg]:w-full [&>svg]:h-full flex items-center justify-center" />
                   ) : (
                     (() => {
                       const Icon = link.icon ? (LucideIcons as any)[
