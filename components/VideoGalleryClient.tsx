@@ -30,7 +30,7 @@ export default function VideoGalleryClient({ data }: { data: any }) {
 
   return (
     <>
-      <section className="py-6 bg-[#fffcfd] overflow-hidden">
+      <section className="py-8 bg-[#fffcfd] overflow-hidden">
         <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
           
           <div className="text-center mb-10 sm:mb-14">

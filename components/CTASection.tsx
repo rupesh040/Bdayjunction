@@ -33,7 +33,7 @@ export default function CTASection() {
       
       <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#fbe8ec]/95 via-[#fbe8ec]/70 to-transparent md:hidden" />
 
-      <div className="mx-auto w-full max-w-[1500px] px-5 py-6 sm:px-8 lg:px-14">
+      <div className="mx-auto w-full max-w-[1500px] px-5 py-8 sm:px-8 lg:px-14">
         <motion.div
           initial={{ opacity: 0, x: -45 }}
           whileInView={{ opacity: 1, x: 0 }}

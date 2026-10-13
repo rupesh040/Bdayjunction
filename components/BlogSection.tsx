@@ -26,7 +26,7 @@ export default function BlogSection({ isBlogPage = false }: { isBlogPage?: boole
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fff7fa] py-6">
+    <section className="relative overflow-hidden bg-[#fff7fa] py-8">
       <div className="pointer-events-none absolute -left-32 top-10 -z-0 h-80 w-80 rounded-full bg-pink-100/50 blur-3xl" />
       <div className="pointer-events-none absolute -right-32 bottom-0 -z-0 h-80 w-80 rounded-full bg-purple-100/30 blur-3xl" />
 

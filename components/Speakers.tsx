@@ -30,7 +30,7 @@ export default function Speakers() {
   const prev = () => setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
 
   return (
-    <section className="py-6 bg-[#fff5f8] relative overflow-hidden">
+    <section className="py-8 bg-[#fff5f8] relative overflow-hidden">
       <div className="max-w-[1350px] mx-auto px-6 sm:px-8 relative z-10">
         
         <motion.div 

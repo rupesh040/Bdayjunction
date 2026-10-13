@@ -60,7 +60,7 @@ export default function ServiceDetailClient({ service }: { service: any }) {
 
   return (
     <main className="overflow-hidden bg-[#fff7fa]">
-      <section className="relative py-6">
+      <section className="relative py-8">
         <div className="pointer-events-none absolute -left-40 top-10 h-[450px] w-[450px] rounded-full bg-[#f6a8cf]/25 blur-[120px]" />
 
         <div className="pointer-events-none absolute -right-40 top-40 h-[400px] w-[400px] rounded-full bg-[#a959d0]/15 blur-[120px]" />
@@ -230,7 +230,7 @@ export default function ServiceDetailClient({ service }: { service: any }) {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-6 bg-[#fff0f6]">
+      <section className="relative overflow-hidden py-8 bg-[#fff0f6]">
         <div className="relative z-10 mx-auto max-w-[1280px] px-5 sm:px-7 md:px-10 lg:px-12">
           <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
             <motion.div

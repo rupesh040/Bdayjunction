@@ -15,7 +15,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="relative bg-[#fff7fa] overflow-hidden py-6 flex items-center">
+    <section className="relative bg-[#fff7fa] overflow-hidden py-8 flex items-center">
        <div className=" mx-auto px-5 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16 w-full lg:pt-0">
         
         <motion.div 

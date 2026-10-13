@@ -15,7 +15,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-6 bg-[#fffcfd]">
+    <section className="py-8 bg-[#fffcfd]">
       <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-4">

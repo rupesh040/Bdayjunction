@@ -34,7 +34,7 @@ export default function WhyChooseUsClient({ data }: { data: any }) {
   };
 
   return (
-    <section className="py-6 bg-[#fff7fa] overflow-hidden">
+    <section className="py-8 bg-[#fff7fa] overflow-hidden">
       <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16 items-center">
           

@@ -27,7 +27,7 @@ export default function ServicesSection({
   const displayedItems = isServicesPage ? items : items.slice(0, 6);
 
   return (
-    <section className="relative overflow-hidden bg-[#fff7fa] py-6">
+    <section className="relative overflow-hidden bg-[#fff7fa] py-8">
       <div className="pointer-events-none absolute -left-40 top-20 h-[400px] w-[400px] rounded-full bg-[#f8b6d5]/25 blur-[120px]" />
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[400px] w-[400px] rounded-full bg-[#b765d6]/15 blur-[120px]" />
 

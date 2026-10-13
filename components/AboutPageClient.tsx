@@ -10,7 +10,7 @@ export default function AboutPageClient({ data }: { data: any }) {
 
   return (
     <>
-      <section className="py-6 bg-[#fffcfd] overflow-hidden">
+      <section className="py-8 bg-[#fffcfd] overflow-hidden">
         <div className="max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             

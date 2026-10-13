@@ -53,7 +53,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fff8fa] py-6">
+    <section className="relative overflow-hidden bg-[#fff8fa] py-8">
 
 
       <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12 xl:px-14">

@@ -8,7 +8,7 @@ export default function BlogDetailClient({ blog }: { blog: any }) {
   if (!blog) return null;
 
   return (
-    <article className="bg-white py-6">
+    <article className="bg-white py-8">
       <div className="mx-auto max-w-[960px] px-5 sm:px-8">
         
         <motion.div 
