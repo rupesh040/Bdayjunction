@@ -19,7 +19,7 @@ interface PageBannerProps {
 
 export default function PageBanner({ title, bgText, image, breadcrumbs = [] }: PageBannerProps) {
   return (
-    <section className="relative w-full overflow-hidden bg-[#243343] py-20 md:py-28 lg:py-32">
+    <section className="relative w-full overflow-hidden bg-[#243343] py-16">
       {image && (
         <motion.div 
           initial={{ scale: 1 }}
@@ -42,10 +42,10 @@ export default function PageBanner({ title, bgText, image, breadcrumbs = [] }: P
       <div className="relative z-10 mx-auto max-w-[1500px] px-6 sm:px-8 md:px-12 lg:px-16 xl:px-20 h-full flex flex-col justify-center">
         
         <motion.h1 
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="mb-4 text-[42px] md:text-[54px] lg:text-[64px] font-bold text-white tracking-tight"
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          className="mb-2 text-[28px] sm:text-[34px] md:text-[40px] lg:text-[44px] font-bold text-white tracking-tight"
         >
           {title}
         </motion.h1>

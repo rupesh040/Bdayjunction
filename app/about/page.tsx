@@ -4,7 +4,6 @@ import contentData from "@/data/content.json";
 import AboutPageClient from "@/components/AboutPageClient";
 import WhyChooseUsClient from "@/components/WhyChooseUsClient";
 import CTASection from "@/components/CTASection";
-import Speakers from "@/components/Speakers";
 
 export default function AboutPage() {
   const aboutPageData = (contentData as any).Birthday.sections.AboutPage.variants.BirthdayAboutPage1;
@@ -16,7 +15,6 @@ export default function AboutPage() {
       <AboutPageClient data={aboutPageData} />
       <WhyChooseUsClient data={whyChooseUsData} />
       <CTASection />
-      <Speakers/>
     </>
   );
 }

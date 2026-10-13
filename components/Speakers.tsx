@@ -30,7 +30,7 @@ export default function Speakers() {
   const prev = () => setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
 
   return (
-    <section className="py-10 bg-[#fff5f8] relative overflow-hidden">
+    <section className="py-6 bg-[#fff5f8] relative overflow-hidden">
       <div className="max-w-[1350px] mx-auto px-6 sm:px-8 relative z-10">
         
         <motion.div 
@@ -47,7 +47,7 @@ export default function Speakers() {
             <span className="w-12 h-[2px] bg-[#df1762]"></span>
           </div>
           
-          <h2 className="text-[36px] md:text-[46px] lg:text-[50px] font-extrabold text-[#01174a] mb-5 leading-[1.1] tracking-[-1px]">
+          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#01174a] mb-5 leading-[1.1] tracking-[-1px]">
             {titlePart1} <span className="text-[#df1762]">{titlePart2}</span>
           </h2>
           

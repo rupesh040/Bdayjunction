@@ -15,7 +15,7 @@ export default function FaqSection() {
   };
 
   return (
-    <section className="relative bg-[#fff7fa] overflow-hidden min-h-[700px] lg:min-h-[850px] flex items-center  lg:py-0">
+    <section className="relative bg-[#fff7fa] overflow-hidden py-6 flex items-center">
        <div className=" mx-auto px-5 sm:px-8 lg:px-12 relative z-10 flex flex-col lg:flex-row items-start lg:items-center gap-12 lg:gap-16 w-full lg:pt-0">
         
         <motion.div 
@@ -23,12 +23,12 @@ export default function FaqSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="flex-1 w-full lg:self-start lg:mt-24 relative"
+          className="flex-1 w-full lg:self-start lg:mt-6 relative"
         >
           <div className="relative inline-block z-10">
             <div className="absolute -inset-8 bg-gradient-to-r from-[#fff7fa] via-[#fff7fa]/90 to-transparent blur-xl rounded-full -z-10 lg:block hidden" />
             
-            <h2 className="text-[38px] sm:text-[46px] md:text-[54px] font-extrabold text-[#10213e] leading-[1.1] tracking-[-1px] mb-4">
+            <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#10213e] leading-[1.1] tracking-[-1px] mb-4">
               {faq.headingPart1} <span className="text-[#ed1769]">{faq.headingPart2}</span>
             </h2>
             <p className="text-[#596274] text-[16px] sm:text-[17px] leading-[1.7] mb-8 max-w-[450px] font-medium relative">
@@ -53,7 +53,7 @@ export default function FaqSection() {
           </div>
         </motion.div>
 
-        <div className="flex-1 w-full flex flex-col gap-4 lg:py-20 z-10 relative">
+        <div className="flex-1 w-full flex flex-col gap-4 py-6 z-10 relative">
           {(faq.items || []).slice(0, 8).map((item: any, index: number) => {
             const isOpen = openIndex === index;
 

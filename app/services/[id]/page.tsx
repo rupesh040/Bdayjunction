@@ -1,7 +1,10 @@
+import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { services, pageBanners } from "@/data";
 import ServiceDetailClient from "@/components/ServiceDetailClient";
 import PageBanner from "@/components/PageBanner";
+
+export const instant = false;
 
 interface ServiceDetailProps {
   params: Promise<{
@@ -15,7 +18,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ServiceDetail({ params }: ServiceDetailProps) {
+async function ServiceDetailContent({ params }: ServiceDetailProps) {
   const resolvedParams = await params;
 
   const service = services.items.find(
@@ -40,5 +43,13 @@ export default async function ServiceDetail({ params }: ServiceDetailProps) {
       />
       <ServiceDetailClient service={service} />
     </>
+  );
+}
+
+export default function ServiceDetail({ params }: ServiceDetailProps) {
+  return (
+    <Suspense fallback={<div className="min-h-[60vh] bg-white" />}>
+      <ServiceDetailContent params={params} />
+    </Suspense>
   );
 }

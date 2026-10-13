@@ -21,7 +21,7 @@ export default function ContactSection() {
   } = contact;
 
   return (
-    <section className="relative overflow-hidden bg-[#fff7fa] py-14 sm:py-16 md:py-20 lg:py-24">
+    <section className="relative overflow-hidden bg-[#fff7fa] py-6">
       <div className="pointer-events-none absolute -left-40 top-20 h-[420px] w-[420px] rounded-full bg-[#f5a5d0]/30 blur-[120px]" />
 
       <div className="pointer-events-none absolute -right-40 bottom-0 h-[420px] w-[420px] rounded-full bg-[#b85bd2]/20 blur-[120px]" />
@@ -42,7 +42,7 @@ export default function ContactSection() {
             <span className="h-[2px] w-14 bg-[#e82a76]" />
           </div>
 
-          <h2 className="text-[36px] font-extrabold leading-[1.05] tracking-[-1.5px] text-[#10213e] sm:text-[44px] md:text-[50px] lg:text-[54px]">
+          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold leading-[1.1] tracking-[-1px] text-[#10213e]">
             {headingPart1}{" "}
             <span className="text-[#ed2671]">{headingPart2}</span>
           </h2>

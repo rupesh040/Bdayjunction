@@ -34,7 +34,7 @@ export default function WhyChooseUsClient({ data }: { data: any }) {
   };
 
   return (
-    <section className="py-12 sm:py-20 bg-[#fff7fa] overflow-hidden">
+    <section className="py-6 bg-[#fff7fa] overflow-hidden">
       <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-10 xl:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-[0.8fr_1.2fr] gap-12 lg:gap-16 items-center">
           
@@ -59,7 +59,7 @@ export default function WhyChooseUsClient({ data }: { data: any }) {
               <div className="h-[2px] w-14 bg-[#ed2671]"></div>
             </div>
             
-            <h2 className="text-[32px] sm:text-[38px] md:text-[44px] lg:text-[40px] xl:text-[46px] font-extrabold text-[#17233f] leading-[1.1] mb-6 tracking-tight">
+            <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#17233f] leading-[1.1] mb-6 tracking-[-1px]">
               {data.headingPart1} <br className="hidden sm:block" />
               <span className="text-[#ed2671]">{data.headingPart2}</span>
             </h2>
@@ -80,14 +80,14 @@ export default function WhyChooseUsClient({ data }: { data: any }) {
                   key={index}
                   variants={itemVariants}
                   whileHover={{ y: -4, boxShadow: "0 10px 25px rgba(237,38,113,0.08)" }}
-                  className="bg-white p-5 sm:p-6 rounded-[20px] shadow-[0_6px_24px_rgba(237,38,113,0.04)] border border-[#fff0f6] flex flex-row items-start gap-4 transition-all duration-300"
+                  className="bg-white p-5 sm:p-6 rounded-[20px] shadow-[0_6px_24px_rgba(237,38,113,0.04)] border border-[#fff0f6] flex flex-row items-center gap-4 transition-all duration-300"
                 >
-                  <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full bg-[#ffe8f1] text-[#ed2671]">
+                  <div className="flex h-[46px] w-[46px] shrink-0 items-center justify-center rounded-full bg-[#ffe8f1] text-[#ed2671] shadow-sm">
                     {iconMap[feature.icon] || <Heart size={20} />}
                   </div>
                   <div>
-                    <h3 className="text-[14px] font-bold text-[#17233f] mb-1 leading-tight">{feature.title}</h3>
-                    <p className="text-[12px] text-[#667186] leading-[1.5]">{feature.text}</p>
+                    <h3 className="text-[15px] font-bold text-[#17233f] mb-1 leading-tight">{feature.title}</h3>
+                    <p className="text-[13px] text-[#667186] leading-[1.5]">{feature.text}</p>
                   </div>
                 </motion.div>
               ))}

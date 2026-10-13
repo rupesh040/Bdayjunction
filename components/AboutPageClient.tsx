@@ -10,7 +10,7 @@ export default function AboutPageClient({ data }: { data: any }) {
 
   return (
     <>
-      <section className="py-12 sm:py-20 bg-[#fffcfd] overflow-hidden">
+      <section className="py-6 bg-[#fffcfd] overflow-hidden">
         <div className="max-w-[1480px] mx-auto px-5 sm:px-8 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
             
@@ -25,7 +25,7 @@ export default function AboutPageClient({ data }: { data: any }) {
                 <div className="h-[2px] w-14 bg-[#ed2671]"></div>
               </div>
               
-              <h2 className="text-[36px] sm:text-[42px] md:text-[50px] lg:text-[48px] xl:text-[50px] font-extrabold text-[#17233f] leading-[1.1] mb-8 tracking-tight">
+              <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#17233f] leading-[1.1] mb-8 tracking-[-1px]">
                 {data.headingPart1} <br className="hidden sm:block" />
                 <span className="text-[#ed2671]">{data.headingPart2}</span>
               </h2>

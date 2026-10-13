@@ -97,54 +97,15 @@ export default function Navbar() {
                           duration: 0.3,
                           ease: [0.22, 1, 0.36, 1],
                         }}
-                        className="absolute bottom-[8px] left-1/2 h-[2px] -translate-x-1/2 rounded-full bg-[#d41458]"
+                        className="absolute bottom-[18px] left-1/2 h-[2.5px] -translate-x-1/2 rounded-full bg-[#d41458]"
                       />
 
-                      <span className="absolute inset-x-0 bottom-0 h-[2px] origin-left scale-x-0 bg-[#d41458] transition-transform duration-300 group-hover:scale-x-100" />
+                      <span className="absolute bottom-[18px] left-1/2 h-[2.5px] w-0 -translate-x-1/2 rounded-full bg-[#d41458] transition-all duration-300 group-hover:w-[64px]" />
                     </Link>
                   </motion.div>
                 );
               })}
             </div>
-
-            <motion.div
-              initial={{ scaleY: 0, opacity: 0 }}
-              animate={{ scaleY: 1, opacity: 1 }}
-              transition={{
-                duration: 0.5,
-                delay: 0.5,
-              }}
-              className="mx-7 h-[38px] w-px origin-center bg-white/80"
-            />
-
-            <motion.div
-              initial={{ x: 25, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.55,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="pr-8"
-            >
-              <Link href={header.buttonHref}>
-                <motion.div
-                  whileHover={{
-                    scale: 1.04,
-                    backgroundColor: "#a9144d",
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ duration: 0.2 }}
-                  className="flex h-[51px] items-center gap-4 bg-[#b71957] px-7 text-[15px] font-semibold text-white shadow-sm"
-                >
-                  <span>{(header as any).button}</span>
-                  {(() => {
-                    const BtnIcon = (LucideIcons as any)[(header as any).buttonIcon] || LucideIcons.ArrowRight;
-                    return <BtnIcon size={18} strokeWidth={2} />;
-                  })()}
-                </motion.div>
-              </Link>
-            </motion.div>
           </div>
 
           <motion.button
@@ -234,28 +195,6 @@ export default function Navbar() {
                   );
                 })}
               </div>
-
-              <motion.div
-                initial={{ y: 15, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{
-                  duration: 0.4,
-                  delay: 0.3,
-                }}
-                className="pt-5"
-              >
-                <Link
-                  href={header.buttonHref}
-                  onClick={() => setIsOpen(false)}
-                  className="flex h-[50px] w-full items-center justify-center gap-3 bg-[#b71957] text-[15px] font-semibold text-white transition-colors hover:bg-[#a9144d]"
-                >
-                  <span>{(header as any).button}</span>
-                  {(() => {
-                    const BtnIcon = (LucideIcons as any)[(header as any).buttonIcon] || LucideIcons.ArrowRight;
-                    return <BtnIcon size={18} />;
-                  })()}
-                </Link>
-              </motion.div>
             </div>
           </motion.div>
         )}

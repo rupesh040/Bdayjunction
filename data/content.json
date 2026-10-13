@@ -228,13 +228,15 @@
         "variants": {
           "BirthdayBanner1": {
             "banners": [
-              "/images/hero/hero.jpg"
+              "/images/hero/hero.jpg",
+              "/images/hero/heroBanner.webp",
+              "/images/cta.webp"
             ],
             "backgroundImage": "/images/hero/heroBanner.webp",
             "cursiveText": "BIRTHDAY PLANNER",
             "heading": "Make Your Birthday Truly Special",
             "description": "Create unforgettable memories with our expert event planning services tailored exclusively for your special moments.",
-            "buttonText": "Book Now",
+            "buttonText": "Contact Us",
             "buttonHref": "/contact"
           }
         }
@@ -606,6 +608,27 @@
                 "name": "Neha Kapoor",
                 "title": "Birthday Girl",
                 "quote": "I couldn't have asked for a better sweet 16. It was exactly what I pictured and perfectly planned out.",
+                "rating": 5
+              },
+              {
+                "image": "/images/hero/hero.jpg",
+                "name": "Vikram Malhotra",
+                "title": "Father of Twins",
+                "quote": "Celebrating our twins' first milestone was stress-free and spectacular thanks to BdayJunction. Every single detail was handled with perfection!",
+                "rating": 5
+              },
+              {
+                "image": "/images/hero/hero.jpg",
+                "name": "Ananya Sen",
+                "title": "Party Host",
+                "quote": "The themed decor and entertainment were beyond our expectations. All our guests couldn't stop praising the magical setup!",
+                "rating": 5
+              },
+              {
+                "image": "/images/hero/hero.jpg",
+                "name": "Karan Joshi",
+                "title": "Delighted Dad",
+                "quote": "Exceptional service from initial planning to on-site coordination. You truly brought effortless joy to our family celebration.",
                 "rating": 5
               }
             ]
@@ -1644,7 +1667,7 @@
         "about": {
           "title": "About Us",
           "bgText": "ABOUT US",
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "breadcrumbs": [
             {
               "label": "Home",
@@ -1658,7 +1681,7 @@
         "contact": {
           "title": "Contact",
           "bgText": "CONTACT",
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "breadcrumbs": [
             {
               "label": "Home",
@@ -1672,7 +1695,7 @@
         "services": {
           "title": "Our Services",
           "bgText": "SERVICES",
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "breadcrumbs": [
             {
               "label": "Home",
@@ -1686,7 +1709,7 @@
         "gallery": {
           "title": "Gallery",
           "bgText": "GALLERY",
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "breadcrumbs": [
             {
               "label": "Home",
@@ -1700,7 +1723,7 @@
         "blog": {
           "title": "Blog",
           "bgText": "OUR BLOG",
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "breadcrumbs": [
             {
               "label": "Home",
@@ -1723,13 +1746,13 @@
               "href": "/faq"
             }
           ],
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "bgText": "FAQ"
         },
         "blogDetail": {
           "title": "Blog Details",
           "bgText": "BLOG",
-          "image": "/images/pageBanner.webp",
+          "image": "/images/pageBanner.jpg",
           "breadcrumbs": [
             {
               "label": "Home",

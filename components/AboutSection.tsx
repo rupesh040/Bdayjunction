@@ -53,7 +53,7 @@ export default function AboutSection() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#fff8fa] py-10 sm:py-16 lg:py-18 xl:py-22">
+    <section className="relative overflow-hidden bg-[#fff8fa] py-6">
 
 
       <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12 xl:px-14">
@@ -72,16 +72,16 @@ export default function AboutSection() {
               variants={itemVariants}
               className="mb-5 flex items-center gap-3"
             >
-              <span className="text-[12px] font-semibold uppercase tracking-[0.12em] text-[#df3977] sm:text-[13px]">
+              <span className="h-[2px] w-10 bg-[#df3977]" />
+              <span className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#df3977] sm:text-[13px]">
                 {eyebrow}
               </span>
-
-              <span className="h-[2px] w-12 bg-[#df3977]" />
+              <span className="h-[2px] w-10 bg-[#df3977]" />
             </motion.div>
 
             <motion.h2
               variants={itemVariants}
-              className="max-w-[600px] text-[38px] font-extrabold leading-[1.02] tracking-[-1.5px] text-[#17233f] sm:text-[46px] md:text-[52px] lg:text-[49px] xl:text-[56px]"
+              className="max-w-[600px] text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#17233f] leading-[1.1] tracking-[-1px]"
             >
               <span className="block">{headingPart1}</span>
               <span className="block text-[#d61961]">{headingPart2}</span>
@@ -96,28 +96,28 @@ export default function AboutSection() {
 
             <motion.div
               variants={itemVariants}
-              className="mt-7 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-5"
+              className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-6"
             >
               {features.map((feature, index) => (
                 <motion.div
                   key={`${feature.title}-${index}`}
-                  whileHover={{ y: -4 }}
+                  whileHover={{ y: -3 }}
                   transition={{ duration: 0.25 }}
-                  className="flex items-start gap-4"
+                  className="flex items-start gap-4 rounded-xl p-2 transition-colors hover:bg-white/60"
                 >
-                  <div className="flex h-[54px] w-[54px] shrink-0 items-center justify-center rounded-[14px] bg-[#ffe0eb] text-[#df1762]">
+                  <div className="flex h-[48px] w-[48px] shrink-0 items-center justify-center rounded-[12px] bg-[#ffe0eb] text-[#df1762] shadow-sm">
                     {iconMap[feature.icon] || (
-                      <Heart size={25} strokeWidth={2} />
+                      <Heart size={22} strokeWidth={2.2} />
                     )}
                   </div>
 
-                  <div>
-                    <h3 className="text-[15px] font-bold leading-5 text-[#17233f] sm:text-[16px]">
+                  <div className="pt-0.5">
+                    <h3 className="text-[16px] font-bold leading-snug text-[#17233f]">
                       {feature.title}
                     </h3>
 
                     {(feature as any).description && (
-                      <p className="mt-2 text-[13px] leading-5 text-[#687184]">
+                      <p className="mt-1 text-[13px] leading-5 text-[#596274]">
                         {(feature as any).description}
                       </p>
                     )}

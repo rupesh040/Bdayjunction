@@ -33,7 +33,7 @@ export default function CTASection() {
       
       <div className="absolute inset-0 -z-20 bg-gradient-to-t from-[#fbe8ec]/95 via-[#fbe8ec]/70 to-transparent md:hidden" />
 
-      <div className="mx-auto w-full max-w-[1500px] px-5 py-16 sm:px-8 lg:px-14">
+      <div className="mx-auto w-full max-w-[1500px] px-5 py-6 sm:px-8 lg:px-14">
         <motion.div
           initial={{ opacity: 0, x: -45 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -67,7 +67,7 @@ export default function CTASection() {
               delay: 0.4,
               ease: [0.22, 1, 0.36, 1] as any,
             }}
-            className="mb-6 text-[40px] font-extrabold leading-[1.05] tracking-[-1.5px] text-[#01174a] md:text-[50px] lg:text-[56px]"
+            className="mb-6 text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold leading-[1.1] tracking-[-1px] text-[#01174a]"
           >
             <span className="block">{headingPart1}</span>
             <span className="block text-[#db1c62]">{headingPart2}</span>

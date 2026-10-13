@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { testimonial } from "@/data";
@@ -12,12 +12,13 @@ export default function Testimonials() {
     headingPart1,
     headingPart2,
     description,
-    items,
-  } =
-    testimonial;
+    items = [],
+  } = testimonial;
 
-  const [currentPage, setCurrentPage] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [isPaused, setIsPaused] = useState(false);
+  const [direction, setDirection] = useState(1); // 1 = next, -1 = prev
 
   useEffect(() => {
     const updateItemsPerPage = () => {
@@ -31,7 +32,6 @@ export default function Testimonials() {
     };
 
     updateItemsPerPage();
-
     window.addEventListener("resize", updateItemsPerPage);
 
     return () => {
@@ -39,29 +39,39 @@ export default function Testimonials() {
     };
   }, []);
 
-  const totalPages = Math.max(Math.ceil(items.length / itemsPerPage), 1);
+  const maxIndex = Math.max(0, items.length - itemsPerPage);
+
+  const nextPage = useCallback(() => {
+    setDirection(1);
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  }, [maxIndex]);
+
+  const previousPage = useCallback(() => {
+    setDirection(-1);
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  }, [maxIndex]);
 
   useEffect(() => {
-    if (currentPage >= totalPages) {
-      setCurrentPage(totalPages - 1);
-    }
-  }, [currentPage, totalPages]);
+    if (items.length <= itemsPerPage || isPaused) return;
 
-  const visibleItems = items.slice(
-    currentPage * itemsPerPage,
-    currentPage * itemsPerPage + itemsPerPage,
-  );
+    const timer = setInterval(() => {
+      nextPage();
+    }, 6000);
 
-  const nextPage = () => {
-    setCurrentPage((prev) => (prev + 1) % totalPages);
-  };
+    return () => clearInterval(timer);
+  }, [items.length, itemsPerPage, isPaused, nextPage]);
 
-  const previousPage = () => {
-    setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
-  };
+  // Total indicator steps
+  const totalSteps = maxIndex + 1;
+
+  const visibleItems = items.slice(currentIndex, currentIndex + itemsPerPage);
 
   return (
-    <section className="relative overflow-hidden bg-[#fff7fa] py-8 sm:py-10 lg:py-12">
+    <section 
+      className="relative overflow-hidden bg-[#fff7fa] py-6"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       <div className="pointer-events-none absolute left-1/2 top-0 -z-0 h-72 w-[600px] -translate-x-1/2 rounded-full bg-pink-100/50 blur-3xl" />
 
       <div className="mx-auto max-w-[1500px] px-5 sm:px-8 lg:px-12 xl:px-14">
@@ -75,15 +85,15 @@ export default function Testimonials() {
           }}
           className="relative z-10 mx-auto max-w-[900px] text-center"
         >
-          <div className="mb-5 flex items-center justify-center gap-4">
-            <span className="text-[12px] font-semibold uppercase tracking-[0.14em] text-[#e33279] sm:text-[13px]">
+          <div className="mb-4 flex items-center justify-center gap-3">
+            <span className="h-[2px] w-10 bg-[#e33279]" />
+            <span className="text-[12px] font-bold uppercase tracking-[0.16em] text-[#e33279] sm:text-[13px]">
               {eyebrow}
             </span>
-
-            <span className="h-[2px] w-12 bg-[#e33279]" />
+            <span className="h-[2px] w-10 bg-[#e33279]" />
           </div>
 
-          <h2 className="text-[36px] font-extrabold leading-tight tracking-[-1.5px] text-[#10213e] sm:text-[44px] md:text-[48px]">
+          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#10213e] leading-[1.1] tracking-[-1px]">
             <span>{headingPart1} </span>
             <span className="text-[#ed2671]">{headingPart2}</span>
           </h2>
@@ -97,48 +107,32 @@ export default function Testimonials() {
           <motion.button
             type="button"
             onClick={previousPage}
-            whileHover={{
-              scale: 1.08,
-              x: -2,
-            }}
-            whileTap={{
-              scale: 0.9,
-            }}
-            className="absolute left-0 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#f7c9da] bg-white text-[#ed2671] shadow-sm sm:left-1 sm:h-10 sm:w-10 md:left-[-8px] md:h-11 md:w-11 lg:left-[-28px] lg:h-[52px] lg:w-[52px]"
-            aria-label="Previous testimonials"
+            whileHover={{ scale: 1.1, x: -2 }}
+            whileTap={{ scale: 0.92 }}
+            className="absolute left-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f7c9da] bg-white text-[#ed2671] shadow-md transition-colors hover:bg-[#ed2671] hover:text-white sm:left-1 sm:h-11 sm:w-11 md:left-[-8px] lg:left-[-24px] lg:h-[48px] lg:w-[48px]"
+            aria-label="Previous testimonial"
           >
-            <ChevronLeft
-              size={20}
-              className="sm:size-[22px] lg:size-[24px]"
-            />
+            <ChevronLeft size={22} strokeWidth={2.5} />
           </motion.button>
 
           <motion.button
             type="button"
             onClick={nextPage}
-            whileHover={{
-              scale: 1.08,
-              x: 2,
-            }}
-            whileTap={{
-              scale: 0.9,
-            }}
-            className="absolute right-0 top-1/2 z-20 flex h-9 w-9 -translate-y-1/2 items-center justify-center rounded-full border border-[#f7c9da] bg-white text-[#ed2671] shadow-sm sm:right-1 sm:h-10 sm:w-10 md:right-[-8px] md:h-11 md:w-11 lg:right-[-28px] lg:h-[52px] lg:w-[52px]"
-            aria-label="Next testimonials"
+            whileHover={{ scale: 1.1, x: 2 }}
+            whileTap={{ scale: 0.92 }}
+            className="absolute right-0 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full border border-[#f7c9da] bg-white text-[#ed2671] shadow-md transition-colors hover:bg-[#ed2671] hover:text-white sm:right-1 sm:h-11 sm:w-11 md:right-[-8px] lg:right-[-24px] lg:h-[48px] lg:w-[48px]"
+            aria-label="Next testimonial"
           >
-            <ChevronRight
-              size={20}
-              className="sm:size-[22px] lg:size-[24px]"
-            />
+            <ChevronRight size={22} strokeWidth={2.5} />
           </motion.button>
 
-          <div className="overflow-hidden px-10 sm:px-12 md:px-14 lg:px-8">
+          <div className="overflow-hidden px-8 sm:px-12 md:px-12 lg:px-8">
             <AnimatePresence mode="wait">
               <motion.div
-                key={`${currentPage}-${itemsPerPage}`}
+                key={`${currentIndex}-${itemsPerPage}`}
                 initial={{
                   opacity: 0,
-                  x: 35,
+                  x: direction > 0 ? 40 : -40,
                 }}
                 animate={{
                   opacity: 1,
@@ -146,7 +140,7 @@ export default function Testimonials() {
                 }}
                 exit={{
                   opacity: 0,
-                  x: -35,
+                  x: direction > 0 ? -40 : 40,
                 }}
                 transition={{
                   duration: 0.45,
@@ -156,7 +150,7 @@ export default function Testimonials() {
               >
                 {visibleItems.map((item, index) => (
                   <TestimonialCard
-                    key={`${item.name}-${currentPage}-${index}`}
+                    key={`${item.name}-${currentIndex}-${index}`}
                     {...item}
                     index={index}
                   />
@@ -166,26 +160,25 @@ export default function Testimonials() {
           </div>
         </div>
 
-        <div className="mt-9 flex items-center justify-center gap-2">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <motion.button
-              key={index}
-              type="button"
-              onClick={() => setCurrentPage(index)}
-              animate={{
-                width: currentPage === index ? 32 : 9,
-                opacity: currentPage === index ? 1 : 0.45,
-              }}
-              transition={{
-                duration: 0.3,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="h-[9px] rounded-full bg-[#ed2671]"
-              aria-label={`Go to testimonial page ${index + 1}`}
-              aria-current={currentPage === index}
-            />
-          ))}
-        </div>
+        {totalSteps > 1 && (
+          <div className="mt-10 flex items-center justify-center gap-2">
+            {Array.from({ length: totalSteps }).map((_, index) => (
+              <button
+                key={index}
+                type="button"
+                onClick={() => {
+                  setDirection(index > currentIndex ? 1 : -1);
+                  setCurrentIndex(index);
+                }}
+                className={`h-[9px] rounded-full transition-all duration-300 ${
+                  currentIndex === index ? "w-8 bg-[#ed2671]" : "w-2.5 bg-[#f7c9da] hover:bg-[#ed2671]/60"
+                }`}
+                aria-label={`Go to testimonial slide ${index + 1}`}
+                aria-current={currentIndex === index}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

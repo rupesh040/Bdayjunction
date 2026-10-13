@@ -15,7 +15,7 @@ export default function FAQSection() {
   };
 
   return (
-    <section className="py-20 bg-[#fffcfd]">
+    <section className="py-6 bg-[#fffcfd]">
       <div className="max-w-[1500px] mx-auto px-5 sm:px-8 lg:px-12">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-4 mb-4">
@@ -24,26 +24,26 @@ export default function FAQSection() {
             </span>
             <span className="w-16 h-[2px] bg-[#df1762]"></span>
           </div>
-          <h2 className="text-[36px] md:text-[46px] lg:text-[50px] font-extrabold text-[#01174a] mb-5 leading-[1.1] tracking-[-1px]">
+          <h2 className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[48px] font-extrabold text-[#01174a] mb-5 leading-[1.1] tracking-[-1px]">
             {faq.headingPart1} <span className="text-[#df1762]">{faq.headingPart2}</span>
           </h2>
           <p className="text-[#596274] text-[15px] sm:text-[17px] max-w-[700px] mx-auto leading-relaxed">
             {faq.description}
           </p>
         </div>
-        <div className="flex flex-col xl:flex-row gap-8 lg:gap-10 mb-16 items-start">
+        <div className="flex flex-col xl:flex-row gap-8 lg:gap-10 mb-16 items-stretch">
           <motion.div 
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="w-full xl:w-[30%] shrink-0 relative rounded-[24px] overflow-hidden shadow-xl h-[400px] xl:h-[480px]"
+            className="w-full xl:w-[32%] shrink-0 relative rounded-[24px] overflow-hidden shadow-xl min-h-[380px] xl:min-h-[460px] xl:self-stretch transition-all duration-500 ease-in-out"
           >
             <Image 
               src={(faq as any).image} 
               alt="FAQ" 
               fill 
-              className="object-cover"
-              sizes="(max-width: 1280px) 100vw, 30vw"
+              className="object-cover transition-all duration-500"
+              sizes="(max-width: 1280px) 100vw, 32vw"
             />
           </motion.div>
           <div className="flex-1 w-full flex flex-col md:flex-row gap-4 lg:gap-6">

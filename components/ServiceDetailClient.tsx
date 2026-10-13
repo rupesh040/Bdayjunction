@@ -60,13 +60,13 @@ export default function ServiceDetailClient({ service }: { service: any }) {
 
   return (
     <main className="overflow-hidden bg-[#fff7fa]">
-      <section className="relative py-5 sm:py-6 md:py-8 lg:py-10">
+      <section className="relative py-6">
         <div className="pointer-events-none absolute -left-40 top-10 h-[450px] w-[450px] rounded-full bg-[#f6a8cf]/25 blur-[120px]" />
 
         <div className="pointer-events-none absolute -right-40 top-40 h-[400px] w-[400px] rounded-full bg-[#a959d0]/15 blur-[120px]" />
 
         <div className="relative z-10 mx-auto max-w-[1480px] px-5 sm:px-7 md:px-10 lg:px-12">
-          <div className="grid grid-cols-1 gap-7  p-3 backdrop-blur-sm md:p-4 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:p-5 xl:gap-10">
+          <div className="grid grid-cols-1 items-start gap-7 md:p-2 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 xl:gap-10">
             <motion.div
               initial={{
                 opacity: 0,
@@ -130,7 +130,7 @@ export default function ServiceDetailClient({ service }: { service: any }) {
                 delay: 0.12,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="flex flex-col justify-center px-3 py-7 sm:px-6 sm:py-8 lg:px-3 lg:py-5 xl:px-5"
+              className="flex flex-col justify-start pt-0 px-3 sm:px-3 lg:px-4 xl:px-6"
             >
               <motion.div
                 initial={{
@@ -168,7 +168,7 @@ export default function ServiceDetailClient({ service }: { service: any }) {
                   delay: 0.25,
                   ease: [0.22, 1, 0.36, 1],
                 }}
-                className="text-[34px] font-extrabold leading-[1.05] tracking-[-1.5px] text-[#10213e] sm:text-[42px] md:text-[46px] lg:text-[42px] xl:text-[48px]"
+                className="text-[30px] sm:text-[36px] md:text-[42px] lg:text-[46px] font-extrabold leading-[1.1] tracking-[-1px] text-[#10213e]"
               >
                 {service.title}
               </motion.h1>
@@ -191,7 +191,7 @@ export default function ServiceDetailClient({ service }: { service: any }) {
                 {service.description}
               </motion.p>
 
-              <div className="mt-6 grid grid-cols-1 gap-3 rounded-[14px] bg-[#fff0f6] p-4 sm:grid-cols-2 sm:p-5">
+              <div className="mt-6 grid grid-cols-1 gap-6 rounded-[14px] bg-[#fff0f6] p-4 sm:grid-cols-2 sm:p-5">
                 {features.map((feature, index) => (
                   <motion.div
                     key={`${feature}-${index}`}
@@ -230,9 +230,9 @@ export default function ServiceDetailClient({ service }: { service: any }) {
         </div>
       </section>
 
-      <section className="relative overflow-hidden py-8 sm:py-10 md:py-12 lg:py-14 bg-[#fff0f6]">
+      <section className="relative overflow-hidden py-6 bg-[#fff0f6]">
         <div className="relative z-10 mx-auto max-w-[1280px] px-5 sm:px-7 md:px-10 lg:px-12">
-          <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
+          <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14">
             <motion.div
               initial={{
                 opacity: 0,
@@ -363,16 +363,16 @@ export default function ServiceDetailClient({ service }: { service: any }) {
                     }}
                     className="flex items-center gap-3 sm:block"
                   >
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ffe2ee] text-[#ed2671] sm:mb-3">
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#ffe2ee] text-[#ed2671] sm:mb-3 shadow-sm">
                       {iconMap[item.icon] || <Sparkles size={22} />}
                     </div>
 
                     <div>
-                      <h3 className="text-[13px] font-bold text-[#10213e]">
+                      <h3 className="text-[14px] font-bold text-[#10213e] leading-snug">
                         {item.title}
                       </h3>
 
-                      <p className="mt-1 text-[11px] leading-5 text-[#727b8b]">
+                      <p className="mt-1 text-[12px] leading-5 text-[#596274]">
                         {item.text}
                       </p>
                     </div>

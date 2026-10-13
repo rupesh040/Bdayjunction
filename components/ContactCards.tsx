@@ -10,7 +10,7 @@ export default function ContactCards() {
   if (!cards) return null;
 
   return (
-    <div className="mt-20 grid grid-cols-1 gap-6 md:grid-cols-3">
+    <div className="mt-12 sm:mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
       {cards.map((card: any, index: number) => (
         <motion.div
           key={index}
