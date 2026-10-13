@@ -1,198 +1,133 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
-import { motion } from "framer-motion";
+import { useState, useEffect, useCallback } from "react";
+import { motion, AnimatePresence, Variants } from "framer-motion";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { banner } from "@/data";
 
 export default function Hero() {
-  const {
-    cursiveText: eyebrow,
-    heading: title,
-    description,
-    buttonText,
-    buttonHref,
-    banners,
-    backgroundImage,
-  } = banner;
+  const banners = banner.banners && banner.banners.length > 0 
+    ? banner.banners 
+    : [banner.backgroundImage || "/images/hero/hero.jpg"];
 
-  const button = {
-    label: buttonText,
-    href: buttonHref,
+  const [[currentIndex, direction], setPage] = useState<[number, number]>([0, 0]);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const paginate = useCallback(
+    (newDirection: number) => {
+      setPage(([prevIndex]) => {
+        let nextIndex = prevIndex + newDirection;
+        if (nextIndex < 0) nextIndex = banners.length - 1;
+        if (nextIndex >= banners.length) nextIndex = 0;
+        return [nextIndex, newDirection];
+      });
+    },
+    [banners.length]
+  );
+
+  const goToSlide = (index: number) => {
+    setPage(([prevIndex]) => [index, index > prevIndex ? 1 : -1]);
   };
 
-  const image = banners[0];
+  useEffect(() => {
+    if (isPaused || banners.length <= 1) return;
+    const timer = setInterval(() => {
+      paginate(1);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [isPaused, paginate, banners.length]);
 
-  const titleWords = title.split(" ");
+  const slideVariants: Variants = {
+    enter: (dir: number) => ({
+      x: dir > 0 ? "100%" : dir < 0 ? "-100%" : "0%",
+      opacity: 0.8,
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: "tween" as const, duration: 0.7, ease: [0.25, 1, 0.5, 1] },
+        opacity: { duration: 0.4 },
+      },
+    },
+    exit: (dir: number) => ({
+      x: dir < 0 ? "100%" : "-100%",
+      opacity: 0.8,
+      transition: {
+        x: { type: "tween" as const, duration: 0.7, ease: [0.25, 1, 0.5, 1] },
+        opacity: { duration: 0.4 },
+      },
+    }),
+  };
 
   return (
-    <section className="relative isolate overflow-hidden ">
-      <div className="absolute inset-0 -z-30">
-        <Image
-          src={backgroundImage}
-          alt="Background Banner"
-          fill
-          priority
-          className="object-cover"
-        />
-      </div>
-
-      <div className="absolute inset-0 -z-20 overflow-hidden pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-white/95 via-white/80 to-white/10 lg:bg-gradient-to-r lg:from-white/95 lg:via-white/70 lg:to-transparent" />
-        
-        <div className="absolute -left-[10%] top-[-10%] h-[600px] w-[600px] rounded-full bg-[#ed2671]/30 blur-[100px] sm:bg-[#ed2671]/20" />
-        <div className="absolute left-[10%] top-[30%] h-[500px] w-[500px] rounded-full bg-[#5518a6]/25 blur-[120px] sm:bg-[#5518a6]/15" />
-        <div className="absolute -left-[5%] bottom-[-10%] h-[450px] w-[450px] rounded-full bg-[#ff8fab]/30 blur-[100px] sm:bg-[#ff8fab]/20" />
-      </div>
-
-      <div className="mx-auto flex min-h-[520px] max-w-[1500px] items-center px-5 py-12 sm:px-8 md:min-h-[560px] md:py-16 lg:px-14 lg:py-20 xl:min-h-[565px]">
-        <div className="grid w-full grid-cols-1 items-center gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:gap-10 xl:gap-16">
+    <section
+      className="relative w-full overflow-hidden bg-slate-950 h-[450px]"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+      aria-label="Banner Image Carousel"
+    >
+      {/* Slides */}
+      <div className="relative h-full w-full overflow-hidden">
+        <AnimatePresence initial={false} custom={direction} mode="popLayout">
           <motion.div
-            initial={{ opacity: 0, x: -45 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{
-              duration: 0.9,
-              delay: 0.15,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative z-10 max-w-[590px] lg:pl-8 xl:pl-12"
+            key={currentIndex}
+            custom={direction}
+            variants={slideVariants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            className="absolute inset-0 h-full w-full"
           >
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.6,
-                delay: 0.3,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="mb-5 flex items-center gap-3"
-            >
-              <span className="text-[11px] font-bold tracking-[0.28em] text-[#272038] sm:text-xs">
-                {eyebrow}
-              </span>
-
-              <span className="h-[2px] w-12 bg-[#db3b83]" />
-            </motion.div>
-
-            <h1 className="max-w-[590px] text-[42px] font-extrabold leading-[0.98] tracking-[-1.8px] text-[#30203d] sm:text-[52px] md:text-[60px] lg:text-[58px] xl:text-[64px]">
-              {titleWords.map((word, index) => {
-                const isPink = word.toLowerCase().includes("birthday");
-                const isPurple = ["truly", "special"].includes(
-                  word.toLowerCase(),
-                );
-
-                return (
-                  <motion.span
-                    key={`${word}-${index}`}
-                    initial={{ opacity: 0, y: 25 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{
-                      duration: 0.65,
-                      delay: 0.42 + index * 0.07,
-                      ease: [0.22, 1, 0.36, 1],
-                    }}
-                    className={`mr-[0.22em] inline-block ${
-                      isPink
-                        ? "text-[#ed2671]"
-                        : isPurple
-                          ? "text-[#5518a6]"
-                          : ""
-                    }`}
-                  >
-                    {word}
-                  </motion.span>
-                );
-              })}
-            </h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.7,
-                delay: 0.8,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="mt-6 max-w-[500px] text-[15px] leading-6 text-[#554957] sm:text-[16px] sm:leading-7"
-            >
-              {description}
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.7,
-                delay: 0.95,
-                ease: [0.22, 1, 0.36, 1],
-              }}
-              className="mt-7"
-            >
-              <Link href={button.href}>
-                <motion.div
-                  whileHover={{
-                    scale: 1.04,
-                    boxShadow: "0 12px 30px rgba(210, 16, 91, 0.28)",
-                  }}
-                  whileTap={{ scale: 0.97 }}
-                  transition={{ duration: 0.2 }}
-                  className="inline-flex h-[56px] items-center gap-5 rounded-full bg-[#cf0754] px-8 text-[15px] font-bold text-white shadow-[0_8px_22px_rgba(207,7,84,0.22)]"
-                >
-                  <span>{button.label}</span>
-
-                  <motion.span
-                    initial={{ x: 0 }}
-                    whileHover={{ x: 5 }}
-                    className="text-xl leading-none"
-                  >
-                    →
-                  </motion.span>
-                </motion.div>
-              </Link>
-            </motion.div>
+            <Image
+              src={banners[currentIndex]}
+              alt={`Banner slide ${currentIndex + 1}`}
+              fill
+              priority={currentIndex === 0}
+              sizes="100vw"
+              className="object-cover object-center select-none"
+            />
           </motion.div>
+        </AnimatePresence>
+      </div>
 
-          <motion.div
-            initial={{ opacity: 0, x: 55, scale: 0.94 }}
-            animate={{ opacity: 1, x: 0, scale: 1 }}
-            transition={{
-              duration: 1,
-              delay: 0.25,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="relative z-10 w-full lg:ml-auto lg:max-w-[680px]"
+      {/* Navigation Arrows */}
+      {banners.length > 1 && (
+        <>
+          <button
+            onClick={() => paginate(-1)}
+            aria-label="Previous slide"
+            className="group absolute left-4 sm:left-7 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#ed2671] active:scale-95 shadow-lg"
           >
-            <div className="relative rounded-[32px]  p-[10px] sm:p-[14px]">
-              <div 
-                className="absolute inset-0 rounded-[32px] border-[3px] border-[#ed2671] "
-                style={{
-                  maskImage: "linear-gradient(to bottom, black 25%, transparent 25%, transparent 75%, black 75%)",
-                  WebkitMaskImage: "linear-gradient(to bottom, black 25%, transparent 25%, transparent 75%, black 75%)"
-                }}
+            <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7 transition-transform duration-300 group-hover:-translate-x-0.5" />
+          </button>
+
+          <button
+            onClick={() => paginate(1)}
+            aria-label="Next slide"
+            className="group absolute right-4 sm:right-7 top-1/2 -translate-y-1/2 z-20 flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-full bg-black/35 text-white backdrop-blur-md transition-all duration-300 hover:scale-110 hover:bg-[#ed2671] active:scale-95 shadow-lg"
+          >
+            <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </button>
+
+          {/* Dots Indicator */}
+          <div className="absolute bottom-5 sm:bottom-7 left-1/2 -translate-x-1/2 z-20 flex items-center gap-2.5">
+            {banners.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => goToSlide(idx)}
+                aria-label={`Go to slide ${idx + 1}`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${
+                  idx === currentIndex
+                    ? "w-8 bg-[#ed2671] shadow-md shadow-[#ed2671]/40"
+                    : "w-2.5 bg-white/60 hover:bg-white"
+                }`}
               />
-              <div className="relative overflow-hidden rounded-[22px] sm:rounded-[26px]">
-                <motion.div
-                  whileHover={{ scale: 1.025 }}
-                  transition={{
-                    duration: 0.7,
-                    ease: "easeIn",
-                  }}
-                  className="relative overflow-hidden"
-                >
-                  <Image
-                    src={image}
-                    alt="Birthday celebration"
-                    width={900}
-                    height={620}
-                    priority
-                    className="aspect-[16/9] w-full object-cover"
-                  />
-               </motion.div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
-      </div>
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }
