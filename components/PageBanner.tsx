@@ -31,7 +31,7 @@ export default function PageBanner({ title, bgText, image, breadcrumbs = [] }: P
             src={image}
             alt={title}
             fill
-            className="object-cover object-center opacity-30"
+            className="object-cover object-right opacity-30"
             priority
           />
         </motion.div>
